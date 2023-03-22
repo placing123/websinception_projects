@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UI.auction.playerpoint.AuctionPlayerPointsFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginRight="@dimen/margin_20"
+        android:background="@drawable/bg_auction_trans"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            style="@style/SignUPCustomEditTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/event"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/ag_list_item_title_txt_size"
+            app:textAllCaps="true"
+            app:textfont="Lato-Bold.ttf" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/selected_sort"
+            style="@style/SignUPCustomEditTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_toLeftOf="@+id/points_sort"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Actual"
+            android:textColor="@color/white"
+
+            android:textSize="@dimen/ag_list_item_title_txt_size"
+            app:textAllCaps="true"
+            app:textfont="light" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/points_sort"
+            style="@style/SignUPCustomEditTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/Scored"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ag_list_item_title_txt_size"
+            app:textAllCaps="true"
+            app:textfont="Lato-Bold.ttf" />
+
+    </RelativeLayout>
+
+    <com.websinception.megastar.customView.CustomTextView
+        android:id="@+id/stats_not_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:gravity="center"
+        android:padding="@dimen/dimen_10dp"
+        android:text="No points available"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/ag_list_item_title_txt_size"
+        android:visibility="gone"
+        app:drawableTopCompat="@drawable/ic_trophy"
+        app:textfont="Lato-Bold.ttf" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:nestedScrollingEnabled="false">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

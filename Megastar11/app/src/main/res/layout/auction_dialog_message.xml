@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/yellow_light"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:layout_margin="@dimen/margin_5"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/title"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:scaleType="centerInside"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:src="@drawable/fantasy_logo_text" />
+
+
+
+        <com.websinception.megastar.customView.CustomTextView
+            app:textAllCaps="true"
+            android:id="@+id/ctv_game_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:text="AUCTION"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:textfont="Futuxkci_1.ttf" />
+
+    </LinearLayout>
+
+    <com.websinception.megastar.customView.CustomTextView
+        android:id="@+id/dm_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="10"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="bjkfsdjkfjksd"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:textfont="@string/bold" />
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dimen_30dp"
+        android:layout_weight="2">
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/dm_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/black"
+            android:text="@string/cancel"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:paddingLeft="@dimen/dimen_15dp"
+            app:textAllCaps="true"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:layout_marginRight="@dimen/dimen_30dp"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/dm_okay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingLeft="@dimen/dimen_15dp"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:paddingBottom="3dp"
+            app:textAllCaps="true"
+            android:background="@color/black"
+            android:text="@string/okay"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+             />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

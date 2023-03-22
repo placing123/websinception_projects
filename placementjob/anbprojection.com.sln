@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "anbprojection.com", "http://localhost:61866", "{946C4032-A394-4201-A976-C09E3C9E11DE}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61866"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\inetpub\vhosts\anbprojection.com\httpdocs\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61866\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61866"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\inetpub\vhosts\anbprojection.com\httpdocs\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61866\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\..\..\..\inetpub\vhosts\anbprojection.com\httpdocs\"
+		VWDPort = "61866"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{946C4032-A394-4201-A976-C09E3C9E11DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{946C4032-A394-4201-A976-C09E3C9E11DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFD5417B-5F07-413F-BE64-DB9F3B2A4FBB}
+	EndGlobalSection
+EndGlobal

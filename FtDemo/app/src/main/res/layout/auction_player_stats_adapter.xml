@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.mw.fantasy.customView.CustomTextView
+        android:id="@+id/ctv_match"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SignUPCustomEditTextStyle"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:textSize="@dimen/ag_list_item_title_txt_size"
+        app:textfont="Lato-Bold.ttf"
+        android:padding="@dimen/dimen_5dp" />
+
+    <com.mw.fantasy.customView.CustomTextView
+        android:id="@+id/ctv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SignUPCustomEditTextStyle"
+        android:layout_marginLeft="@dimen/dimen_15dp"
+        android:textSize="@dimen/ag_list_item_dsc_txt_size"
+        app:textfont="Lato-Medium.ttf"
+        android:textColor="@color/black"
+        android:layout_below="@+id/ctv_match" />
+
+    <com.mw.fantasy.customView.CustomTextView
+        android:id="@+id/ctv_selected_by"
+        android:layout_width="@dimen/dimen_70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        style="@style/SignUPCustomEditTextStyle"
+        android:padding="@dimen/dimen_5dp"
+        app:textfont="Lato-Bold.ttf"
+        android:gravity="center"
+        android:textSize="@dimen/ag_list_item_title_txt_size"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp" />
+
+    <com.mw.fantasy.customView.CustomTextView
+        android:id="@+id/ctv_points"
+        android:layout_width="@dimen/dimen_70dp"
+        app:textfont="Lato-Bold.ttf"
+        android:layout_height="wrap_content"
+        style="@style/SignUPCustomEditTextStyle"
+        android:padding="@dimen/dimen_5dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:textSize="@dimen/ag_list_item_title_txt_size"
+        android:layout_toLeftOf="@+id/ctv_selected_by"
+        android:layout_marginRight="@dimen/dimen_20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ctv_date"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:background="@color/gray"/>
+
+</RelativeLayout>

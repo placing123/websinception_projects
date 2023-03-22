@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/auction_bg" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        android:gravity="center"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:padding="18dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_back" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/back"
+                android:layout_toRightOf="@+id/back"
+                android:gravity="center"
+                android:text="@string/contests"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_regular"
+                app:textAllCaps="true"
+                app:textfont="Lato-Bold.ttf" />
+
+            <LinearLayout
+                android:id="@+id/linout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:id="@+id/wallet"
+                    android:layout_width="@dimen/dimen_40dp"
+                    android:layout_height="@dimen/dimen_40dp"
+
+                    android:padding="@dimen/dimen_10dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_wallet_auction" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_joined_contest_btn_root"
+        android:layout_below="@+id/toolbar">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll">
+
+                <include layout="@layout/auction_series_info" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_auction_trans"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_16dp"
+                android:weightSum="2">
+
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/gotContestCode"
+                    style="@style/default_ripple"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_auc_btn"
+                    android:gravity="center"
+                    android:padding="@dimen/auc_btn_padding"
+                    android:text="Join Private Contest"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/auc_btn_txt_size"
+                    app:textfont="@string/auc_btn_font" />
+
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/create_contest"
+                    style="@style/default_ripple"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_auc_btn"
+                    android:gravity="center"
+                    android:padding="@dimen/auc_btn_padding"
+                    android:text="Play Private"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/auc_btn_txt_size"
+                    app:textfont="@string/auc_btn_font" />
+
+
+            </LinearLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dimen_35dp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/ll_error_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_error_not_found"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:contentDescription="@null"
+                        android:tint="@color/white"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/not_found_img" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_error_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/play_bold"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_5"
+                        android:textAllCaps="true"
+                        app:textfont="Lato-Bold.ttf"
+                        android:text="@string/network_error"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_12sp" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/tv_tryAgn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/play_bold"
+                        android:gravity="center"
+                        android:padding="@dimen/auc_btn_padding"
+                        android:visibility="gone"
+                        android:text="@string/try_again"
+                        android:background="@drawable/bg_auc_btn"
+                        app:textfont="@string/auc_btn_font"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/auc_btn_txt_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/rl_all_contest_root"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginBottom="@dimen/dimen_8dp"
+                        android:padding="@dimen/dimen_8dp">
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:id="@+id/ctv_all_contest_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="All Contests"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            app:textfont="Lato-Black.ttf" />
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ctv_all_contest_title"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="Choose from a variety of contests."
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            app:textfont="Lato-Bold.ttf" />
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:tint="@color/yellow"
+                            app:srcCompat="@drawable/ic_next" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_offset_1px"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginBottom="@dimen/dimen_12sp"
+                        android:background="@color/white" />
+
+                </LinearLayout>
+
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_contest"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <RelativeLayout
+        android:background="@color/black"
+        android:id="@+id/rl_joined_contest_btn_root"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/dimen_8dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/ll_joined_contest_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_auc_btn"
+            android:paddingLeft="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/auc_btn_padding"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:paddingBottom="@dimen/auc_btn_padding">
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:textfont="@string/auc_btn_font"
+                android:text="Contest Joined "
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/auc_btn_txt_size"
+                />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/total_joined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/border_round_button"
+                android:textAllCaps="true"
+                android:gravity="center"
+                app:textfont="@string/auc_btn_font"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

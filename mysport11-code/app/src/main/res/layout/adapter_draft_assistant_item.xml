@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_16dp"
+    android:layout_marginRight="@dimen/dimen_16dp"
+    android:background="@drawable/bg_auction_trans"
+    android:orientation="horizontal"
+    android:padding="@dimen/dimen_10dp">
+
+    <com.mw.fantasy.customView.CustomImageView
+        android:id="@+id/civ_pic"
+        android:layout_width="@dimen/dimen_60dp"
+        android:layout_height="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        app:backgroundImage="@color/white"
+        app:placeholderImage="@drawable/player"
+        app:roundAsCircle="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="22dp"
+        android:orientation="vertical">
+
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ctv_price"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="VIRAT KOHLI"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ag_list_item_title_txt_size"
+            app:textAllCaps="true"
+            app:textfont="Lato-Bold.ttf" />
+
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ag_list_item_title_txt_size"
+            app:textfont="Lato-Bold.ttf" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_below="@+id/ctv_name"
+            android:background="@color/white" />
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="IND - BAT"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/ag_list_item_dsc_txt_size"
+            app:textAllCaps="true"
+            app:textfont="Lato-Medium.ttf" />
+
+    </RelativeLayout>
+
+</LinearLayout>

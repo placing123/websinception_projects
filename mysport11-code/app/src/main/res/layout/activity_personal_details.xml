@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_background"
+    tools:context=".UI.personalDetails.PersonalDetailsActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="?android:attr/actionBarSize"
+        android:elevation="10dp" />
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:elevation="@dimen/_4sdp"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/Theme.AppCompat.NoActionBar" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:src="@drawable/fantasy_logo_text"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/ic_back"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:orientation="vertical">
+
+
+
+                <com.mw.fantasy.customView.CustomInputEditText
+                    android:id="@+id/ciet_name"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:imeActionLabel="Next"
+                    android:imeOptions="actionNext"
+                    android:maxLength="50"
+                    android:padding="@dimen/login_form_edt_padding"
+                    android:textCursorDrawable="@drawable/cursor"
+                    android:textSize="@dimen/text_medium"
+                    app:et_dividerColor="@color/black"
+                    app:et_dividerErrorColor="@color/black"
+                    app:et_dividerHeight="1dp"
+                    app:et_dividerPadding="3dp"
+                    app:et_labelTextColor="@color/colorPrimary"
+                    app:et_labelTextSize="@dimen/text_small"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorPrimary"
+                    android:hint="@string/name"
+                    android:inputType="text"
+                    app:hintfont="normal"
+                    app:textfont="normal" />
+
+
+                <com.mw.fantasy.customView.CustomInputEditText
+                    android:id="@+id/ciet_email"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeActionLabel="Next"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    app:et_labelTextColor="@color/colorPrimary"
+                    android:maxLength="50"
+                    android:padding="@dimen/login_form_edt_padding"
+                    app:et_labelTextSize="@dimen/text_small"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorPrimary"
+                    android:hint="@string/email"
+                    android:textSize="@dimen/edt_txt_size_normal"
+                    app:hintfont="normal"
+                    app:textfont="normal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <com.mw.fantasy.customView.CustomInputEditText
+                        android:id="@+id/ciet_password"
+                        style="@style/SignUPCustomEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:et_labelTextColor="@color/colorPrimary"
+                        android:imeActionLabel="Next"
+                        android:imeOptions="actionNext"
+                        app:et_labelTextSize="@dimen/text_small"
+                        android:maxLength="50"
+                        android:padding="@dimen/login_form_edt_padding"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorPrimary"
+                        android:inputType="textPassword"
+                        android:hint="@string/password"
+                        android:textSize="@dimen/edt_txt_size_normal"
+                        app:hintfont="normal"
+                        app:textfont="normal" />
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_change_pwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/label_change"
+                        android:textColor="@color/black"
+                        app:textfont="light" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <com.mw.fantasy.customView.CustomInputEditText
+                        android:id="@+id/ciet_your_fav_team"
+                        style="@style/SignUPCustomEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeActionLabel="Next"
+                        android:imeOptions="actionNext"
+                        android:enabled="false"
+                        android:maxLength="50"
+                        android:padding="@dimen/login_form_edt_padding"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:hint="@string/your_fav_team"
+                        android:textSize="@dimen/edt_txt_size_normal"
+                        app:hintfont="normal"
+                        app:textfont="normal" />
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/set_favorite_team"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/set"
+                        android:textColor="@color/black"
+                        app:textfont="light" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="vertical">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        style="@style/SignUPCustomEditTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/login_form_edt_padding"
+                        android:text="@string/date_of_birth"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_small"
+                         />
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_set_dob"
+                        style="@style/SignUPCustomEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:gravity="center_vertical"
+                        android:hint="DD MM YYYY"
+                        android:paddingLeft="@dimen/login_form_edt_padding"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_small"
+                        app:textfont="light" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_marginBottom="@dimen/dimen_15dp"
+                        android:background="@color/black" />
+
+                </LinearLayout>
+
+                <com.mw.fantasy.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:text="@string/gender"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/colorPrimary"
+                    app:textfont="light" />
+
+                <RadioGroup
+                    android:id="@+id/rb_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rb_male"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:background="@drawable/radio_btn_background"
+                        android:button="@android:color/transparent"
+                        android:checked="true"
+                        android:drawablePadding="@dimen/dimen_10dp"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_5dp"
+                        android:text="@string/male" />
+
+                    <RadioButton
+                        android:id="@+id/rb_female"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/margin_20"
+                        android:background="@drawable/radio_btn_background"
+                        android:button="@android:color/transparent"
+                        android:drawablePadding="@dimen/dimen_10dp"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_5dp"
+                        android:text="@string/female" />
+
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        style="@style/SignUPCustomEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_line"
+                        android:padding="@dimen/login_form_edt_padding"
+
+                        android:text="@string/verify_your_account"
+                        app:textfont="light" />
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_verify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/verify"
+                        android:textColor="@color/black"
+                        app:textfont="light" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:weightSum="1">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        style="@style/SignUPCustomEditTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/login_form_edt_padding"
+                        android:text="@string/allow_sms_notification"
+                        app:textfont="light" />
+
+                    <Switch
+                        android:id="@+id/toggle_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:layout_gravity="center"
+                        android:checked="true"
+                        android:theme="@style/MyToogleTheme" />
+                </LinearLayout>
+
+
+                <com.mw.fantasy.customView.CustomInputEditText
+                    android:id="@+id/ciet_address"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:imeActionLabel="Next"
+                    android:imeOptions="actionNext"
+                    android:maxLength="50"
+                    android:padding="@dimen/login_form_edt_padding"
+                    android:textCursorDrawable="@drawable/cursor"
+                    android:textSize="@dimen/text_medium"
+                    app:et_dividerColor="@color/black"
+                    app:et_dividerErrorColor="@color/black"
+                    app:et_dividerHeight="1dp"
+                    app:et_dividerPadding="3dp"
+                    app:et_labelTextColor="@color/colorPrimary"
+                    app:et_labelTextSize="@dimen/text_small"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorPrimary"
+                    android:hint="@string/address"
+                    android:inputType="text"
+                    app:hintfont="normal"
+                    app:textfont="normal"  />
+
+
+                <com.mw.fantasy.customView.CustomInputEditText
+                    android:id="@+id/ciet_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:imeActionLabel="Next"
+                    android:imeOptions="actionNext"
+                    android:maxLength="50"
+                    android:padding="@dimen/login_form_edt_padding"
+                    android:textCursorDrawable="@drawable/cursor"
+                    android:textSize="@dimen/text_medium"
+                    app:et_dividerColor="@color/black"
+                    app:et_dividerErrorColor="@color/black"
+                    app:et_dividerHeight="1dp"
+                    app:et_dividerPadding="3dp"
+                    app:et_labelTextColor="@color/colorPrimary"
+                    app:et_labelTextSize="@dimen/text_small"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorPrimary"
+                    android:hint="@string/city"
+                    android:inputType="text"
+                    app:hintfont="normal"
+                    app:textfont="normal"  />
+
+
+                <com.mw.fantasy.customView.CustomInputEditText
+                    android:id="@+id/ciet_pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:imeActionLabel="Next"
+                    android:imeOptions="actionNext"
+                    android:maxLength="50"
+                    android:padding="@dimen/login_form_edt_padding"
+                    android:textCursorDrawable="@drawable/cursor"
+                    android:textSize="@dimen/text_medium"
+                    app:et_dividerColor="@color/black"
+                    app:et_dividerErrorColor="@color/black"
+                    app:et_dividerHeight="1dp"
+                    app:et_dividerPadding="3dp"
+                    app:et_labelTextColor="@color/colorPrimary"
+                    app:et_labelTextSize="@dimen/text_small"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorPrimary"
+                    android:hint="@string/pincode"
+                    android:inputType="text"
+                    app:hintfont="normal"
+                    app:textfont="normal"  />
+
+                <com.mw.fantasy.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/login_form_edt_padding"
+                    android:text="@string/state"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_small"
+                    app:textfont="normal" />
+
+                <com.mw.fantasy.customView.CustomSpinner
+                    android:id="@+id/spinner_states"
+                    style="@style/mySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/login_form_edt_padding"
+                    app:rd_style="@style/Material.Drawable.Ripple.Wave" />
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/ctv_update_profile_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/dimen_50dp"
+                    android:background="@drawable/shedow_yellow_background"
+                    android:gravity="center"
+                    android:padding="@dimen/change_pwd_btn_padding"
+                    android:text="@string/update_profile"
+                    android:textColor="@color/white"
+                    app:textfont="normal" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include
+            layout="@layout/loader_layout"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

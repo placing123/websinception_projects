@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_8sdp">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        app:cardCornerRadius="@dimen/_8sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_84sdp"
+            android:orientation="horizontal">
+
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:id="@+id/ctv_actual_price"
+                android:layout_width="wrap_content"
+                android:minWidth="@dimen/_24sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="for"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/_10ssp"
+                    app:textfont="@string/REGULAR" />
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/ctv_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:text="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_18ssp"
+                    app:textfont="Poppins-Bold.otf" />
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/ctv_day_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="day"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/_10ssp"
+                    app:textfont="Poppins-Bold.otf" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:src="@drawable/sub_next" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:elevation="@dimen/_8sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_amount_sub" />
+
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_discounted_amount"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="@dimen/_16sdp"
+            android:text="100"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            app:textfont="Poppins-Bold.otf" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLabelRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_header"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:layout_marginRight="@dimen/_24sdp"
+        android:background="@color/default_background"
+        android:orientation="vertical">
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="Start Membership"
+            android:textColor="#666666"
+            android:textSize="@dimen/_10ssp"
+            app:textfont="Poppins-Regular.otf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/colorPrimary" />
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="Extra Cash Amount"
+            android:textColor="#666666"
+            android:textSize="@dimen/_10ssp"
+            app:textfont="Poppins-Regular.otf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/colorPrimary" />
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="Extra Cash Bonus"
+            android:textColor="#666666"
+            android:textSize="@dimen/_10ssp"
+            app:textfont="Poppins-Regular.otf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/colorPrimary" />
+
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="Free Private Contest"
+            android:textColor="#666666"
+            android:textSize="@dimen/_10ssp"
+            app:textfont="Poppins-Regular.otf" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_start"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/linearLayoutLabelRoot"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="@dimen/_8sdp">
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Get Started"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            app:textfont="Poppins-Regular.otf" />
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

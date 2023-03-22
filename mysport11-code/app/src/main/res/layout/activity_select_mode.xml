@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent"
+    tools:context=".UI.SelectMode.SelectModeActivity">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/fantasy_logo_text"
+        android:layout_width="200dp"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_height="@dimen/dimen_30dp" />
+
+    <com.mw.fantasy.customView.CustomTextView
+        android:id="@+id/ctv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_extra_large"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="@dimen/dimen_50dp"
+        android:text="@string/game_mode"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:weightSum="3"
+                android:layout_below="@+id/ctv"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:id="@+id/ll_daily_fantasy"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_5"
+                    android:src="@drawable/dfs" />
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:id="@+id/ll_auction"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_5"
+                    android:src="@drawable/auction_demo" />
+
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:id="@+id/ll_snack_draft"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_5"
+                    android:src="@drawable/snake_fantasy" />
+
+            </LinearLayout>
+
+</RelativeLayout>

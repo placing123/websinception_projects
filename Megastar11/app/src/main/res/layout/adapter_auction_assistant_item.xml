@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_root"
+    android:layout_marginRight="@dimen/dimen_16dp"
+    android:layout_marginLeft="@dimen/dimen_16dp"
+    android:background="@drawable/bg_auction_trans"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:padding="@dimen/dimen_10dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.websinception.megastar.customView.CustomImageView
+        android:id="@+id/civ_pic"
+        android:layout_width="@dimen/dimen_60dp"
+        android:layout_height="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        app:backgroundImage="@color/white"
+        app:placeholderImage="@drawable/player"
+        app:roundAsCircle="true" />
+
+    <RelativeLayout
+        android:layout_marginRight="22dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_name"
+            android:layout_toLeftOf="@+id/ctv_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:textAllCaps="true"
+            android:text="VIRAT KOHLI"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ag_list_item_title_txt_size"
+            app:textfont="Lato-Bold.ttf" />
+
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/ctv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 Lacs"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ag_list_item_title_txt_size"
+            app:textfont="Lato-Bold.ttf" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_below="@+id/ctv_name"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="@dimen/dimen_1dp"/>
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_info"
+            android:layout_below="@+id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:textAllCaps="true"
+            android:text="IND - BAT"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/ag_list_item_dsc_txt_size"
+            app:textfont="Lato-Medium.ttf" />
+
+    </RelativeLayout>
+
+</LinearLayout>

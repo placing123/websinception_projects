@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_auction_trans"
+    android:layout_marginLeft="@dimen/dimen_10dp"
+    android:layout_marginTop="@dimen/dimen_10dp"
+    android:layout_marginRight="@dimen/dimen_10dp"
+    android:layout_marginBottom="@dimen/dimen_5dp"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_10dp">
+
+        <com.websinception.megastar.customView.CustomImageView
+            android:id="@+id/civ_player_img"
+            android:layout_width="@dimen/dimen_60dp"
+            android:layout_height="@dimen/dimen_60dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            app:placeholderImage="@drawable/player"
+            app:roundAsCircle="true"
+            app:roundingBorderColor="@color/yellow"
+            app:roundingBorderWidth="1dp" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_player_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="@string/bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Country"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_country"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Playing Role"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_role"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Batting Style"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_batting_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Bowling Style"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_bowling_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_background"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        android:elevation="@dimen/margin_5"
+        android:gravity="center"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_change_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_suffle" />
+
+            <ImageView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:paddingVertical="@dimen/_8sdp"
+                android:scaleType="fitStart"
+                android:src="@drawable/fantasy_logo_text" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_wallet_root"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_toLeftOf="@+id/menu"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="@dimen/_2ssp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_24sdp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_2sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:tint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_wallet" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_wallet_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:minWidth="@dimen/_24sdp"
+                        android:text="00.00"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:tint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_add_button" />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="18dp"
+                android:tint="@color/colorPrimary"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_notifictaion" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/notification_counter"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:background="@drawable/black_circle"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_very_small"
+                android:visibility="gone"
+                app:textfont="bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/sportSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/form_padding"
+            android:layout_marginLeft="@dimen/form_padding"
+            android:layout_marginTop="@dimen/option_text_margin"
+            android:layout_marginBottom="@dimen/option_text_margin"
+            android:drawablePadding="15dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:text="@string/selectSport"
+            android:textColor="@color/textColor"
+            android:visibility="gone"
+            app:drawableRightCompat="@drawable/ic_drop_arrow"
+            app:textfont="light"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+
+    <com.websinception.megastar.customView.CustomTextView
+        android:id="@+id/ctv_announcement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:padding="@dimen/dimen_8dp"
+        android:textColor="@color/yellow"
+        android:visibility="gone" />
+
+    <android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/default_background"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_background"
+                app:contentInsetStart="0dp"
+                app:elevation="0dp"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@color/default_background"
+
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.v4.view.ViewPager
+                                android:id="@+id/pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center" />
+
+                            <include
+                                layout="@layout/loader_layout"
+                                android:visibility="gone"></include>
+
+                        </FrameLayout>
+
+                        <com.websinception.megastar.customView.CircleIndicator
+                            android:id="@+id/indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_alignParentBottom="true"
+                            android:background="#33000000"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            app:ci_animator="@anim/indicator_animator"
+                            app:ci_drawable="@drawable/indi_1"
+                            app:ci_drawable_unselected="@drawable/indi_2" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_sportSelector"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/colorPrimaryDark"
+                    android:elevation="10dp"
+                    android:visibility="gone"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/colorPrimary"
+                    app:tabIndicatorHeight="3dp"
+                    app:tabMode="fixed"
+                    app:tabTextColor="@color/black" />
+
+
+            </FrameLayout>
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/selectMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:padding="@dimen/dimen_15dp"
+                android:text="Upcoming Matches"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:textfont="@string/MONTSERRAT_BOLD" />
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/toolbar"
+                android:layout_gravity="bottom"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="10dp"
+                android:visibility="gone"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/colorPrimary"
+                app:tabIndicatorHeight="3dp"
+                app:tabMode="fixed"
+                app:tabTextColor="@color/black" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_tournament_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

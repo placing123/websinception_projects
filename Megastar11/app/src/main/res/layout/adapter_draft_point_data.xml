@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_auction_trans"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_10dp"
+    android:layout_marginTop="@dimen/dimen_5dp"
+    android:layout_marginRight="@dimen/dimen_10dp"
+    android:layout_marginBottom="@dimen/dimen_5dp"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.websinception.megastar.customView.CustomImageView
+                android:id="@+id/civ_team1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:actualImageScaleType="fitXY"
+                app:image_type="halfplus"
+                app:placeholderImage="@drawable/ic_gallery_bg"
+                app:roundAsCircle="false" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_team1"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:layout_gravity="center"
+                android:text="IND"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/secondary_txt_size"
+                app:textfont="normal"/>
+
+        </LinearLayout>
+
+
+
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_30dp"
+            android:layout_marginRight="@dimen/dimen_30dp"
+            android:text="VS"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:textfont="bold" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.websinception.megastar.customView.CustomImageView
+                android:id="@+id/civ_team2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:actualImageScaleType="fitXY"
+                app:image_type="halfplus"
+                app:placeholderImage="@drawable/ic_gallery_bg"
+                app:roundAsCircle="false" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_team2"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:layout_gravity="center"
+                android:text="IND"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/secondary_txt_size"
+                app:textfont="normal"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Starting Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_sp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Total Runs Scored Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_trsp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Fours Scored Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_fsp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Sixes Scored Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_ssp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Strike Rate Bonus Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_srbp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Batting Bonus Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_bbp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Duck Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_dp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Wickets Taken Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_wtp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Maidens Overs Bonus Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_mobp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Economy Bonus Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_ebp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Bowling Bonus Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_bow_bp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Total Run Outs Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_trop"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Stumping Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_stump_p"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Catches Points"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_cp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_5dp">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Total"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_total"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0.0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:textfont="normal" />
+    </LinearLayout>
+
+
+</LinearLayout>

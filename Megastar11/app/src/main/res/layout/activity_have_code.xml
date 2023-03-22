@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ofwhite"
+    android:orientation="vertical">
+
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offWhite"
+    android:id="@+id/coordinator_layout"
+    tools:context=".UI.loginRagisterModule.HaveCode">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:contentInsetEnd="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            android:gravity="center"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="?android:attr/actionBarSize"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:padding="18dp"
+                    android:visibility="visible"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_back" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_toEndOf="@+id/back"
+                    android:layout_toLeftOf="@+id/menu"
+                    android:layout_toRightOf="@+id/back"
+                    android:layout_toStartOf="@+id/menu"
+                    android:layout_centerVertical="true"
+
+                    android:textColor="@color/white"
+                    app:textfont="@string/bold"
+                    android:text="@string/ragisterPlay"
+                    android:textSize="@dimen/toolbar_title_text_size" />
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="?android:attr/actionBarSize"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="18dp"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_back" />
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_referral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/dimen_5dp"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:paddingRight="@dimen/dimen_10dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="@dimen/dimen_50dp"
+                            android:layout_height="@dimen/dimen_50dp"
+                            android:tint="@color/colorPrimary"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/margin_5"
+                            app:srcCompat="@drawable/ic_rupee_envalope" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:orientation="vertical">
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:id="@+id/ctv_mobile_message"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="@string/justStepAway"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:textColor="@color/black"
+                                app:textfont="@string/semiBold"
+                                android:textSize="@dimen/textsize_extra_large" />
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:id="@+id/ctv_mobile_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/claimYourbonus"
+                                android:textColor="@color/gray"
+                                app:textfont="light"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_10dp"
+                        android:elevation="@dimen/elevation_4"
+                        android:background="@drawable/shedow_button_background"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:paddingLeft="@dimen/dimen_10dp"
+                                android:text="@string/mobileNo"
+                                android:textColor="@color/secondary_txt_color"
+                                android:textSize="@dimen/text_very_small"
+                                android:visibility="gone"
+                                app:textfont="semibold"
+                                />
+
+
+                            <com.websinception.megastar.customView.CustomInputEditText
+                                android:id="@+id/enter_invite_code"
+                                style="@style/SignUPCustomEditTextStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:imeActionLabel="Next"
+                                android:imeOptions="actionNext"
+                                android:maxLength="50"
+                                android:padding="@dimen/login_form_edt_padding"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textSize="@dimen/text_small"
+                                app:et_dividerColor="@color/black"
+                                app:et_dividerErrorColor="@color/black"
+                                app:et_dividerHeight="1dp"
+                                app:et_dividerPadding="3dp"
+                                app:et_labelTextColor="@color/black"
+                                app:et_labelTextSize="@dimen/text_very_small"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:hint="@string/enter_invite_cod"
+                                android:inputType="text"
+                                app:hintfont="semibold"
+                                app:textfont="semiBold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:visibility="gone"
+                                android:background="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/margin_20"
+                                android:paddingLeft="@dimen/dimen_10dp"
+                                android:text="@string/mobileNo"
+                                android:textColor="@color/secondary_txt_color"
+                                android:textSize="@dimen/text_very_small"
+                                android:visibility="gone"
+                                app:textfont="semibold"
+                                />
+
+
+                            <com.websinception.megastar.customView.CustomInputEditText
+                                android:id="@+id/mobileNo"
+                                style="@style/SignUPCustomEditTextStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:imeActionLabel="Next"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone"
+                                android:maxLength="50"
+                                android:padding="@dimen/login_form_edt_padding"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textCursorDrawable="@drawable/cursor"
+                                app:et_dividerColor="@color/black"
+                                app:et_dividerErrorColor="@color/black"
+                                app:et_dividerHeight="1dp"
+                                app:et_dividerPadding="3dp"
+                                app:et_labelTextColor="@color/black"
+                                app:et_labelTextSize="@dimen/text_very_small"
+
+                                app:hintfont="semibold"
+                                app:textfont="semiBold"
+                                android:hint="@string/mobileNo"
+                                android:textSize="@dimen/text_small"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:visibility="gone"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:background="@color/black" />
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mobileNoInfo"
+                                android:textColor="@color/black"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:layout_marginLeft="@dimen/margin_20"
+                                android:textSize="@dimen/text_very_small"
+
+                                app:textfont="@string/light"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                          >
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/margin_20"
+                                android:paddingLeft="@dimen/dimen_10dp"
+                                android:text="@string/mobileNo"
+                                android:textColor="@color/secondary_txt_color"
+                                android:textSize="@dimen/text_very_small"
+                                android:visibility="gone"
+                                app:textfont="semibold"
+                                />
+
+                            <com.websinception.megastar.customView.CustomInputEditText
+                                android:id="@+id/email"
+                                style="@style/SignUPCustomEditTextStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_5"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:imeActionLabel="Next"
+                                android:imeOptions="actionNext"
+                                android:maxLength="50"
+                                android:padding="@dimen/login_form_edt_padding"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textCursorDrawable="@drawable/cursor"
+                                app:et_dividerColor="@color/black"
+                                app:et_dividerErrorColor="@color/black"
+                                app:et_dividerHeight="1dp"
+                                app:et_dividerPadding="3dp"
+
+                                app:et_labelTextColor="@color/black"
+                                app:et_labelTextSize="@dimen/text_very_small"
+                                android:inputType="textEmailAddress"
+                                app:hintfont="semibold"
+                                app:textfont="semiBold"
+                                android:hint="@string/email"
+                                android:textSize="@dimen/text_small"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:visibility="gone"
+                                android:background="@color/black" />
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_20"
+
+                                android:text="@string/emailInfo"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_very_small"
+                                app:textfont="@string/light" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:orientation="vertical">
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/margin_20"
+                                android:paddingLeft="@dimen/dimen_10dp"
+                                android:text="@string/mobileNo"
+                                android:textColor="@color/secondary_txt_color"
+                                android:textSize="@dimen/text_very_small"
+                                android:visibility="gone"
+                                app:textfont="semibold"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:weightSum="1">
+
+
+                                <com.websinception.megastar.customView.CustomInputEditText
+                                    android:id="@+id/password"
+                                    style="@style/SignUPCustomEditTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5"
+                                    android:layout_weight=".1"
+                                    android:hint="@string/password"
+                                    android:imeActionLabel="Next"
+                                    android:imeOptions="actionNext"
+
+                                    android:inputType="textPassword"
+                                    android:maxLength="50"
+                                    android:padding="@dimen/login_form_edt_padding"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textCursorDrawable="@drawable/cursor"
+                                    android:textSize="@dimen/text_small"
+                                    app:et_dividerColor="@color/black"
+                                    app:et_dividerErrorColor="@color/black"
+                                    app:et_dividerHeight="1dp"
+                                    app:et_dividerPadding="3dp"
+                                    app:et_labelTextColor="@color/black"
+                                    app:et_labelTextSize="@dimen/text_very_small"
+                                    app:hintfont="semibold"
+                                    app:textfont="light" />
+
+                                <CheckBox
+                                    android:id="@+id/pass_check"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".9"
+                                    android:layout_marginTop="@dimen/dimen_30dp"
+                                    style="@style/StarButton"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:visibility="gone"
+                                android:background="@color/black" />
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_20"
+
+                                android:text="@string/passwordInfo"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_very_small"
+                                app:textfont="@string/light" />
+                        </LinearLayout>
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:id="@+id/next"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:textAllCaps="true"
+                            android:background="@drawable/shedow_yellow_background"
+                            android:gravity="center"
+                            android:padding="@dimen/dimen_10dp"
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:layout_marginRight="@dimen/margin_20"
+                            app:textfont="@string/semiBold"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            android:elevation="@dimen/elevation_4"
+                            android:text="@string/register"
+                            android:layout_marginTop="@dimen/margin_20"
+
+                            />
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:id="@+id/iAgree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:layout_marginBottom="@dimen/dimen_15dp"
+                            android:text="@string/iAgree"
+                            android:textColor="@color/secondary_txt_color"
+                            app:textfont="light"/>
+
+                    </LinearLayout>
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/alreadygaveAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_10dp"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/shedow_red_background"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_10dp"
+                        app:textfont="@string/semiBold"
+                        android:text="@string/alreadyUser"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        android:elevation="@dimen/elevation_4"
+                        android:layout_marginRight="@dimen/dimen_30dp"
+                        android:layout_marginLeft="@dimen/dimen_30dp"
+
+                        />
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+    <include
+        layout="@layout/loader_layout"
+        android:visibility="gone"></include>
+
+</RelativeLayout>

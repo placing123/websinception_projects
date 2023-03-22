@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Demo/Customer.master.cs" Inherits="Franchisee_Franchisee" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome</title>
+ <script>
+     (function (i, s, o, g, r, a, m) {
+         i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+             (i[r].q = i[r].q || []).push(arguments)
+         }, i[r].l = 1 * new Date(); a = s.createElement(o),
+m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+     ga('create', 'UA-49728426-1', 'national-bpo.com');
+     ga('send', 'pageview');
+
+</script>
+<link href="../Customer/css/style.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="../js/jquery.reveal.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#button').click(function (e) { // Button which will activate our modal
+            $('#modal').reveal({ // The item which will be opened with reveal
+                animation: 'fade',                   // fade, fadeAndPop, none
+                animationspeed: 300,                       // how fast animtions are
+                closeonbackgroundclick: true,              // if you click background will modal close?
+                dismissmodalclass: 'close'    // the class of a button or element that will close an open modal
+            });
+            return false;
+        });
+    });
+	</script>
+
+</head>
+<body ondragstart="return false" draggable="false">
+    <form id="form1" runat="server">
+<div class="main">
+  <div class="top_bg">
+    <div class="margin">
+      <div class="top">
+        <div class="top_min">
+          <div class="top_logo"></div>
+           <div class="top_txt" style="width:320px;">Submission End Date: <asp:Label ID="lbl_end_date" 
+                  runat="server"></asp:Label>&nbsp; |&nbsp; <a href="Default.aspx" style="color: #CC0000;" class="black_11">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu_bg">
+    <div class="margin">
+      <div class="menu">
+        <ul>
+          <li><a href="">Home</a></li>          
+          <li><a href="">WorkLoad Submit</a></li>  
+          <li><a href="">Help Line</a></li>          
+          <li><a href="">Change Password</a></li>                      
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="mid_bg">
+    <div class="margin">
+      <div class="mid" style="border:1px solid #353535";>
+        <div class="mid_min">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+  <div class="bot_bg">
+    <div class="margin">
+      <div class="bot">
+          Copyright © 2014  All rights reserved.</div>
+    </div>
+  </div>
+</div>
+    </form>
+</body>
+</html>

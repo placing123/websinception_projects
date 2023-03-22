@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_frag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ctv_team_preview"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/match_timer_info"
+            android:visibility="visible"></include>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_player"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/dimen_10dp"
+                android:visibility="visible"
+                android:layout_gravity="center">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/ll_team_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_team_1_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:drawableLeftCompat="@drawable/circle_red"
+                        android:drawablePadding="@dimen/margin_5"
+                        android:gravity="center"
+                        android:text="0"
+                        app:textfont="light"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/primary_txt_size" />
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_team_1_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        tools:text="FGH"
+                        app:textfont="light"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:textColor="@color/grey_white"
+                        android:textSize="@dimen/text_small_11sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_team_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="@dimen/margin_20"
+                    android:layout_toRightOf="@+id/ll_team_1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_team_2_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:drawableLeftCompat="@drawable/circle_light_blue"
+                        android:drawablePadding="@dimen/margin_5"
+                        android:gravity="center"
+                        android:text="0"
+                        app:textfont="light"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/primary_txt_size" />
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_team_2_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        tools:text="FGH"
+                        app:textfont="light"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:textColor="@color/grey_white"
+                        android:textSize="@dimen/text_small_11sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingLeft="@dimen/margin_20"
+                    android:layout_toRightOf="@+id/devider"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_players"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        tools:text="25/100"
+                        app:textfont="light"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/primary_txt_size" />
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/players"
+                        app:textfont="light"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:textColor="@color/grey_white"
+                        android:textSize="@dimen/text_small_11sp"
+                        app:textAllCaps="true"/>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/devider"
+                    android:layout_width="2dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ll_credits"
+                    android:background="@drawable/shape_vertical_dashed_line" />
+                <LinearLayout
+                    android:id="@+id/ll_credits"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/ll_team_2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_credit_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        tools:text="25/100"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_medium"
+                        app:textfont="light" />
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/credit_left"
+                        app:textfont="light"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:textColor="@color/grey_white"
+                        android:textSize="@dimen/text_small_11sp"
+                        app:textAllCaps="true"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/ll_wk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/Gk"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="GK"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_small"
+                    app:rd_enable="false"
+                    app:textfont="@string/semiBold" />
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.mw.fantasy.customView.CustomImageView
+                        android:id="@+id/civ_wk"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/circle_white_border_light"
+                        app:actualImageScaleType="fitCenter"
+                        app:fadeDuration="500"
+                        app:failureImage="@drawable/ic_wk"
+                        app:placeholderImage="@drawable/ic_wk"
+                        app:roundAsCircle="true"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:id="@+id/ic_wk"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="@dimen/dimen_10dp"
+                        android:layout_margin="@dimen/margin_5"
+                        android:background="@drawable/circle_player_role_on"
+                        app:srcCompat="@drawable/gk"/>
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_wk"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/circle_gray_bg_white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_small_11sp"
+                        app:srcCompat="@drawable/ic_camera"
+                        app:textfont="light" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/DEF"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="DEF"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_small"
+                    app:rd_enable="false"
+                    app:textfont="@string/semiBold" />
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.mw.fantasy.customView.CustomImageView
+                        android:id="@+id/civ_bat"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/circle_white_border_light"
+                        android:padding="2dp"
+                        app:actualImageScaleType="fitCenter"
+                        app:fadeDuration="500"
+                        app:failureImage="@drawable/ic_bat"
+                        app:placeholderImage="@drawable/ic_bat"
+                        android:visibility="gone"
+                        app:roundAsCircle="true" />
+                    <ImageView
+                        android:id="@+id/ic_bat"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="@dimen/dimen_10dp"
+                        android:layout_margin="@dimen/margin_5"
+                        android:background="@drawable/circle_player_role_off"
+                        app:srcCompat="@drawable/def"/>
+
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_bat"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/circle_blue_bg_white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_small_11sp"
+                        app:srcCompat="@drawable/ic_camera"
+                        app:textfont="light" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/ll_ar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/mid"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="MID"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_small"
+                    app:rd_enable="false"
+                    app:textfont="@string/semiBold" />
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.mw.fantasy.customView.CustomImageView
+                        android:id="@+id/civ_ar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/circle_white_border_light"
+                        android:padding="2dp"
+                        app:actualImageScaleType="fitCenter"
+                        app:fadeDuration="500"
+                        app:failureImage="@drawable/ic_allrounder"
+                        app:placeholderImage="@drawable/ic_allrounder"
+                        app:roundAsCircle="true"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:id="@+id/ic_allrounder"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="@dimen/dimen_10dp"
+                        android:layout_margin="@dimen/margin_5"
+                        android:background="@drawable/circle_player_role_off"
+                        app:srcCompat="@drawable/mid"/>
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_ar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/circle_blue_bg_white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_small_11sp"
+                        app:srcCompat="@drawable/ic_camera"
+                        app:textfont="light" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bowl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/st"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="ST"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_small"
+                    app:rd_enable="false"
+                    app:textfont="@string/semiBold" />
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.mw.fantasy.customView.CustomImageView
+                        android:id="@+id/civ_bowl"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/circle_white_border_light"
+                        android:padding="2dp"
+                        app:actualImageScaleType="fitCenter"
+                        app:fadeDuration="500"
+                        app:failureImage="@drawable/ic_bowl"
+                        app:placeholderImage="@drawable/ic_bowl"
+                        app:roundAsCircle="true"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/ic_bowl"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="@dimen/dimen_10dp"
+                        android:layout_margin="@dimen/margin_5"
+                        android:background="@drawable/circle_player_role_off"
+                        app:srcCompat="@drawable/forword"/>
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_bowl"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/circle_blue_bg_white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_small_11sp"
+                        app:srcCompat="@drawable/ic_camera"
+                        app:textfont="light" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_title"
+            style="@style/rippleStyleTransparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/pick_one_gc"
+            android:textColor="@color/greyish_brown"
+            android:textSize="@dimen/text_medium"
+            app:rd_enable="false"
+            app:textAllCaps="true"
+            app:textfont="@string/ASAP" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@color/colorPrimaryDark">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/infoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/info"
+                    android:textSize="@dimen/text_small_11sp"
+                    app:textfont="@string/light"
+                    android:textColor="@color/colorPrimary" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:weightSum="3">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/playerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="@dimen/margin_5"
+                        android:padding="@dimen/dimen_10dp"
+                        android:text="@string/player"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_small_11sp"
+                        app:textAllCaps="true"
+                        app:textfont="@string/light" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:layout_weight="1">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/pointsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="@dimen/margin_5"
+                        android:padding="@dimen/dimen_10dp"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:text="@string/points"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_small_11sp"
+                        app:textAllCaps="true"
+                        app:textfont="@string/light" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:layout_weight="1">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/creditsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen_10dp"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:text="@string/credits"
+                        android:drawablePadding="@dimen/margin_5"
+                        android:textColor="@color/colorPrimary"
+                        app:textAllCaps="true"
+                        android:textSize="@dimen/text_small_11sp"
+                        app:textfont="@string/light"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/transparent_1"
+
+            tools:listitem="@layout/list_item_players" />
+    </LinearLayout>
+
+
+
+    <com.mw.fantasy.customView.CustomTextView
+        android:id="@+id/ctv_team_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_centerInParent="true"
+        app:drawableTopCompat="@drawable/ic_up_arrow"
+        android:gravity="center"
+        android:padding="@dimen/margin_5"
+        android:text="@string/team_preview"
+        android:textColor="@color/warm_grey"
+        android:textSize="@dimen/textsize_small"
+        app:rd_enable="true"
+        app:textAllCaps="true"
+        app:textfont="@string/MONTSERRAT_REGULAR" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_next"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/border_next_bg_white"
+            android:gravity="center"
+            android:padding="@dimen/login_form_edt_padding"
+            android:text="@string/next"
+            android:textColor="@color/grey_white"
+            android:textSize="@dimen/primary_txt_size"
+            app:rd_enable="true"
+            app:textAllCaps="true"
+            app:textfont="@string/MONTSERRAT_REGULAR" />
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/loader_layout"
+        android:visibility="gone" />
+</RelativeLayout>

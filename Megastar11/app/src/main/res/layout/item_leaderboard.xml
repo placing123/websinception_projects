@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/default_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.websinception.megastar.customView.CustomTextView
+                style="@style/rippleStyleTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/nav_leaderboard"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_medium"
+                app:rd_enable="false"
+                app:textfont="light" />
+
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_joined"
+                style="@style/rippleStyleTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="@string/teams"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_medium"
+                app:rd_enable="false"
+                app:textfont="light" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_message"
+                style="@style/rippleStyleTransparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toStartOf="@+id/ctv_download"
+                android:layout_toLeftOf="@+id/ctv_download"
+                android:text="@string/viewteamMsg"
+                android:textColor="@color/warm_grey"
+                android:textSize="@dimen/textsize_too_small"
+                android:visibility="visible"
+                app:rd_enable="false"
+                app:textfont="light" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:background="@drawable/shedow"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="8dp"
+                android:text="@string/viewteam"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                app:textAllCaps="true"
+                app:textfont="light" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

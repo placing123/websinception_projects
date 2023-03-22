@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="24dp"
+    android:layout_marginRight="24dp"
+    android:layout_marginBottom="12dp"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bg_auction_item_black"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_10dp">
+
+        <com.websinception.megastar.customView.CustomImageView
+            android:id="@+id/civ_pic"
+            android:layout_width="@dimen/dimen_40dp"
+            app:placeholderImageScaleType="fitXY"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            app:backgroundImage="@color/white"
+            app:placeholderImage="@drawable/series_place_holder"
+            app:roundAsCircle="true" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_series_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="4"
+            android:minLines="4"
+            android:text="CARABIAN PRIMIOUR LEAGUE T20 | 2019"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:textAllCaps="true"
+            app:textfont="Lato-Bold.ttf" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="95dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_auction_item_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_10dp">
+
+
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:id="@+id/ll_timmer_cont"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="DAY"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/asi_time_txt_size"
+                        app:textfont="Lato-Bold.ttf" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="HRS"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/asi_time_txt_size"
+                        app:textfont="Lato-Bold.ttf" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="MIN"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/asi_time_txt_size"
+                        app:textfont="Lato-Bold.ttf" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="SEC"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/asi_time_txt_size"
+                        app:textfont="Lato-Bold.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:orientation="vertical">
+
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/asi_time_txt_size"
+                        app:textfont="Lato-Bold.ttf" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_hrs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/asi_time_txt_size"
+                        app:textfont="Lato-Bold.ttf" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_min"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/asi_time_txt_size"
+                        app:textfont="Lato-Bold.ttf" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_sec"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/asi_time_txt_size"
+                        app:textfont="Lato-Bold.ttf" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Completed"
+                android:textColor="@color/green"
+                android:textSize="9sp"
+                android:visibility="gone"
+                app:textAllCaps="true"
+                app:textfont="Lato-Bold.ttf" />
+
+
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:tint="@color/black"
+            app:srcCompat="@drawable/ic_right_arrow" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

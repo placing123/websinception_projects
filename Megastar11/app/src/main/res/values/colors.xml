@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e82b2b</color>
+    <color name="colorPrimaryDark">#b31313</color>
+    <color name="colorAccent">#e82b2b</color>
+
+    <color name="createTeamSeector">#009AFA</color>
+
+    <color name="rouge">#ffc51d23</color>
+
+    <color name="greyDarkBg">#E4E2E2</color>
+    <color name="warm_grey">#ff868586</color>
+    <color name="greyish_brown">#ff4a4a4a</color>
+    <color name="greyis_brown">#5E4A4A4A</color>
+    <color name="lightSkyBlue">#DAECFE</color>
+    <color name="white_four">#ffe8e8e8</color>
+    <color name="line_select">#ff868586</color>
+    <color name="line_unselect">#ffafafaf</color>
+
+    <color name="black">#000000</color>
+    <color name="darkblack">#000000</color>
+    <color name="light_black">#424242</color>
+    <color name="nav_icon">#cf1717</color>
+    <color name="nav_icon_light">#a6cf1717</color>
+    <color name="secondary">#a3a8b4</color>
+    <color name="card_shadow">#dae1ec</color>
+    <color name="facebook_color">#3b5998</color>
+
+    <color name="red">#ed0a0a</color>
+
+    <color name="offWhite">#FAFAFA</color>
+
+    <color name="green">#34AF56</color>
+    <color name="button_green">#5fc73b</color>
+    <color name="startColor">#A66586AF</color>
+    <color name="backgroundMain">#E4E2E2</color>
+
+
+    <color name="very_light_blue">#EDF5FB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="ofwhite">#80FFFFFF</color>
+    <color name="unselected_blue">#8EAFCE</color>
+    <color name="selected_blue">#3474AA</color>
+    <color name="lightYellow">#FFECD2</color>
+    <color name="yellow">#FBBF02</color>
+    <color name="textColor">#424242</color>
+    <color name="textColorLight">#676767</color>
+    <color name="textColorHint">#A9A9A9</color>
+
+    <color name="colorControlNormal">#6586AF</color>
+
+    <color name="input_gray">#FFDEE6E6</color>
+    <color name="light_grey">#d3d3d3</color>
+
+    <color name="white_dark">#F8F8F8</color>
+
+    <color name="blue">#FF1784C7</color>
+    <color name="transparent">#00000000</color>
+    <color name="divider_color">#E5EAF1</color>
+    <color name="fee_background">#EDF5FB</color>
+    <color name="drawbleColor">#FFFFFF</color>
+    <color name="doneIconColor">#00BA3C</color>
+    <color name="contest_blue">#2C5BA0</color>
+
+    <color name="text_focused1">#424242</color>
+    <color name="text_default1">#424242</color>
+    <color name="border_focused">#FFFFFF</color>
+    <color name="secondary_tab_color">#FFFFFF</color>
+    <color name="grey_white">#979797</color>
+    <color name="colorSwitchThumbNormal">#FFFFFF</color>
+    <color name="colorSwitchNormal">#CCCFD8</color>
+    <color name="colorSwitchPressed">#E4E9EF</color>
+    <color name="transparent_1">#15000000</color>
+    <color name="gray">#95a5a6</color>
+    <color name="google">#DA473D</color>
+    <color name="secondary_txt_color">#424242</color>
+    <color name="colorPrimary_trans">#26F7B72C</color>
+
+
+    <color name="SkyBlueLight">#CDE7FE</color>
+    <color name="selected_text_blue">#4073AE</color>
+    <color name="unselected_text_blue">#97b4d5</color>
+    <color name="yellow_light">#E8FFE124</color>
+    <color name="yellow_d">#ffe124</color>
+    <color name="green_back">#4E970C</color>
+
+
+    <color name="arrow_dis">#BCBDBF</color>
+
+    <color name="spin1">#545353</color>
+    <color name="spin2">#f7f5f5</color>
+    <color name="off">#CFD0D4</color>
+
+
+    <color name="default_background">#EEEEEE</color>
+
+    <color name="more_info_txt_color">#616161</color>
+
+
+</resources>

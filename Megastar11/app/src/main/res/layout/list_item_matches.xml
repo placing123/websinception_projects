@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hi_main_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_4sdp"
+    android:layout_marginRight="@dimen/_4sdp"
+    android:layout_marginBottom="@dimen/_4sdp"
+    android:background="@drawable/card_bg_primary"
+    android:elevation="@dimen/_4sdp"
+    app:cardCornerRadius="@dimen/_12sdp">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp">
+
+            <View
+                android:id="@+id/view_left_wing"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_18ssp"
+                android:layout_marginLeft="-20dp"
+                android:background="@color/black"
+                android:rotation="65" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:id="@+id/view_right_wing"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_18ssp"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="-20dp"
+                android:background="@color/black"
+                android:rotation="65" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_series_name"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/_32sdp"
+                    android:layout_marginRight="@dimen/_32sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_8ssp"
+                    app:rd_enable="false"
+                    app:textfont="@string/REGULAR" />
+
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_game_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/game_type_bg"
+                    android:elevation="@dimen/dimen_2dp"
+                    android:maxLines="1"
+
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingBottom="@dimen/dimen_2dp"
+                    android:singleLine="true"
+                    android:text="Virtual Tournament"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    app:textAllCaps="true"
+                    app:textfont="@string/REGULAR" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_match_type"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_toRightOf="@+id/ctv_game_type"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="@string/app_name"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:visibility="visible"
+                    app:rd_enable="false"
+                    app:textfont="@string/REGULAR" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.websinception.megastar.customView.CustomImageView
+                        android:id="@+id/iv_team_1"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        app:actualImageScaleType="fitCenter"
+                        app:failureImage="@drawable/match_defult150"
+                        app:failureImageScaleType="fitCenter"
+                        app:placeholderImage="@drawable/match_defult150"
+                        app:placeholderImageScaleType="fitCenter" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_name_1"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="SA"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        android:visibility="visible"
+                        app:rd_enable="false"
+                        app:textfont="@string/light" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_timer"
+                        style="@style/rippleStyleTransparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/bg_timmer"
+                        android:drawablePadding="@dimen/margin_5"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/_8ssp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_8ssp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        app:rd_enable="false"
+                        app:textfont="light" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/ctv_VS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ctv_timer"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Playing 11 announced"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/_7ssp"
+                        app:textfont="@string/REGULAR" />
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_name_2"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="SA"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        android:visibility="visible"
+                        app:rd_enable="false"
+                        app:textfont="@string/light" />
+
+                    <com.websinception.megastar.customView.CustomImageView
+                        android:id="@+id/iv_team_2"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        app:actualImageScaleType="fitCenter"
+                        app:failureImage="@drawable/match_defult150"
+                        app:failureImageScaleType="fitCenter"
+                        app:placeholderImage="@drawable/match_defult150"
+                        app:placeholderImageScaleType="fitCenter" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp" />
+
+
+            <LinearLayout
+                android:id="@+id/linout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_background"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/_4sdp"
+
+                android:paddingRight="@dimen/_4sdp">
+
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/contest_joined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:drawableTint="@color/black"
+                    android:text="@string/contest_joined"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8ssp"
+                    android:visibility="gone"
+                    app:drawableRightCompat="@drawable/ic_right_arrow_12"
+                    app:textfont="@string/REGULAR" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bluredRel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3FFFFFF"
+        android:visibility="visible" />
+
+</android.support.v7.widget.CardView>

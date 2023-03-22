@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "727191216346",
+    "project_id": "megastar-11",
+    "storage_bucket": "megastar-11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727191216346:android:157442c6aaf9c85df6c5e3",
+        "android_client_info": {
+          "package_name": "com.websinception.megastar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727191216346-3olc7cdpqp0g941ttd9dhsqcm1jkgdjq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.websinception.megastar",
+            "certificate_hash": "de04ffc5cabe47b09e7e0a9b1029d86d6c2b99d4"
+          }
+        },
+        {
+          "client_id": "727191216346-2i5ggb8qf4efm14fqa7hliil16l6ou83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEWIMaTQW7IDEskfPQIsrLfhWuCy-Zu_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727191216346-2i5ggb8qf4efm14fqa7hliil16l6ou83.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

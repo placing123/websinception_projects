@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_8dp"
+    android:layout_marginRight="@dimen/dimen_8dp"
+    android:background="@drawable/bg_auction_trans"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.websinception.megastar.customView.CustomImageView
+                android:id="@+id/civ_pic"
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_margin="@dimen/margin_5"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                app:backgroundImage="@color/white"
+                app:placeholderImage="@drawable/player"
+                app:roundAsCircle="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:orientation="vertical">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="VIRAT KOHLI"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="0.0 Points"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ag_list_item_dsc_txt_size"
+                    app:textfont="Lato-Medium.ttf" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:layout_marginRight="@dimen/margin_5"
+            android:orientation="vertical">
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_rank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="#1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_list_item_title_txt_size"
+                app:textAllCaps="true"
+                app:textfont="Lato-Bold.ttf" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_winning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="₹ 1000"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_list_item_dsc_txt_size"
+                app:textAllCaps="true"
+                app:textfont="Lato-Medium.ttf" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_offset_1"
+        android:background="@color/white"/>
+
+
+</LinearLayout>

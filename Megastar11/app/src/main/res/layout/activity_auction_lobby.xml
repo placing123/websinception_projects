@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/auction_bg" />
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        android:elevation="@dimen/margin_5"
+        android:gravity="center"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_change_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_back" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/title"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/fantasy_logo_text" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_game_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:text="AUCTION"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:textAllCaps="true"
+                    app:textfont="Futuxkci_1.ttf" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                app:layout_scrollFlags="scroll">
+
+                <include layout="@layout/auction_series_info" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/score_lyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    app:cardElevation="@dimen/cardElvationMore"
+                    app:contentPadding="@dimen/_8sdp"
+                    android:background="@color/white"
+                    android:visibility="visible">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/scorecardCap"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        app:textfont="@string/semiBold" />
+
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/scoreData"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text="SA"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/dimen_12dp"
+                        android:visibility="gone"
+                        app:textfont="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.websinception.megastar.customView.CustomTextView
+
+                                android:id="@+id/team1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/warm_grey"
+
+                                android:textSize="@dimen/dimen_12dp"
+                                android:visibility="visible"
+                                app:textfont="@string/MONTSERRAT_REGULAR"
+                                tools:text="SA" />
+
+                            <com.websinception.megastar.customView.CustomTextView
+
+                                android:id="@+id/score1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignRight="@id/team1"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/dimen_30dp"
+                                android:layout_marginBottom="0dp"
+                                android:gravity="center"
+
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_12dp"
+                                android:visibility="visible"
+
+                                app:textfont="@string/bold"
+                                tools:text="SA" />
+
+                            <com.websinception.megastar.customView.CustomTextView
+
+                                android:id="@+id/overs1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+
+                                android:layout_marginLeft="@dimen/margin_5"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_12dp"
+                                android:visibility="gone"
+                                app:textfont="@string/MONTSERRAT_REGULAR"
+                                tools:text="SA" />
+
+
+                        </LinearLayout>
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:text="I"
+                            android:textColor="@color/black"
+                            app:textfont="@string/MONTSERRAT_REGULAR" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:id="@+id/team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+
+
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/warm_grey"
+                                android:textSize="@dimen/dimen_12dp"
+                                android:visibility="visible"
+                                app:textfont="@string/MONTSERRAT_REGULAR"
+                                tools:text="SA" />
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:id="@+id/score2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+
+                                android:layout_marginLeft="@dimen/dimen_30dp"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_12dp"
+                                android:visibility="visible"
+                                app:textfont="@string/bold"
+                                tools:text="SA" />
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:id="@+id/overs2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+
+
+                                android:layout_marginLeft="@dimen/margin_5"
+                                android:textColor="@color/warm_grey"
+                                android:textSize="@dimen/dimen_12dp"
+                                android:visibility="gone"
+                                app:textfont="@string/MONTSERRAT_REGULAR"
+                                tools:text="SA" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:visibility="gone"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        android:background="@color/divider_color" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_player_stats_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="@dimen/dimen_5dp"
+                            android:background="@color/divider_color" />
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:id="@+id/ctv_player_stats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/dimen_8dp"
+                            android:paddingTop="@dimen/dimen_5dp"
+                            android:text="View Players Stats"
+                            android:textColor="@color/green"
+                            android:textSize="12sp"
+                            app:drawableLeftCompat="@drawable/ic_player_state"
+                            app:drawableRightCompat="@drawable/ic_next_white"
+                            app:textfont="Lato-Bold.ttf" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dimen_16dp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/dimen_16dp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:id="@+id/total_winnings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/price_pool"
+                                android:textColor="#7f7f7f"
+                                android:textSize="11sp"
+                                app:textAllCaps="true"
+                                app:textfont="Lato-Black.ttf" />
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:id="@+id/ctv_prize_pool"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="..."
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                app:textfont="Lato-Black.ttf"
+                                tools:text="15 Lakhs" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:id="@+id/winners"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/winners"
+                                android:textColor="#7f7f7f"
+
+                                android:textSize="11sp"
+                                app:textfont="Lato-Black.ttf" />
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:id="@+id/ctv_winners_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="@dimen/margin_5"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/dimen_10dp"
+                                android:text="..."
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+
+                                app:textfont="Lato-Black.ttf"
+                                tools:text="6000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:orientation="vertical">
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:id="@+id/entry_fee"
+                                android:layout_width="@dimen/dimen_80dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/entry_fee"
+                                android:textColor="#7f7f7f"
+                                android:textSize="11sp"
+                                app:textfont="Lato-Black.ttf" />
+
+                            <com.websinception.megastar.customView.CustomTextView
+                                android:id="@+id/ctv_entry_fee"
+                                android:layout_width="@dimen/dimen_80dp"
+                                android:layout_height="wrap_content"
+                                android:text="..."
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                app:textfont="Lato-Black.ttf"
+                                tools:text="499" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_contest_size_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ProgressBar
+                                android:id="@+id/seekBar"
+                                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:progressDrawable="@drawable/seekbar_drawable"
+                                android:thumb="@color/transparent" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/dimen_5dp">
+
+                                <com.websinception.megastar.customView.CustomTextView
+                                    android:id="@+id/spotLeftCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="..."
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    app:textfont="Lato-Bold.ttf"
+                                    tools:text="Only 81,4232 spots left" />
+
+                                <com.websinception.megastar.customView.CustomTextView
+                                    android:id="@+id/ctv_contest_size"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:text="..."
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    app:textfont="Lato-Bold.ttf"
+
+                                    tools:text="1,33,333 Teams" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_winning_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="@dimen/dimen_5dp"
+                            android:background="@color/divider_color" />
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:id="@+id/ctv_winning_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/dimen_5dp"
+                            android:text="Your winning is ₹100000"
+                            android:textColor="#7f7f7f"
+                            android:textSize="12sp"
+                            app:textfont="Lato-Bold.ttf" />
+
+
+                    </LinearLayout>
+
+
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_btn_invite"
+                        style="@style/default_ripple"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bg_auc_btn"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="INVITE"
+                        android:textColor="@color/black"
+
+                        android:textSize="@dimen/auc_btn_txt_size"
+                        android:visibility="gone"
+                        app:textAllCaps="true"
+                        app:textfont="@string/auc_btn_font"
+
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_auction_home_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_auction_trans"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8dp"
+                android:visibility="visible"
+                android:weightSum="2"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:layout_marginRight="@dimen/dimen_8dp"
+                    android:layout_marginBottom="@dimen/dimen_8dp"
+                    android:layout_weight="1"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/ll_root_enter_auction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:id="@+id/ctv_auction_home_btn"
+                            style="@style/default_ripple"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/bg_auc_btn"
+                            android:gravity="center"
+                            android:padding="@dimen/auc_btn_padding"
+
+                            android:text="Go to Auction"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/auc_btn_txt_size"
+                            app:textfont="@string/auc_btn_font"
+
+                            />
+
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:id="@+id/ctv_home_btn_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Go to live auction page."
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            app:textfont="Lato-Bold.ttf" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remaining_time_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:id="@+id/ctv_auc_start_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Draft Stats in"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            app:textfont="Lato-Bold.ttf" />
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:id="@+id/ctv_remaining_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/red"
+                            android:textSize="15sp"
+                            app:textfont="Lato-Bold.ttf" />
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_8dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:layout_marginBottom="@dimen/dimen_8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_assistant_btn"
+                        style="@style/default_ripple"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/bg_auc_btn"
+                        android:gravity="center"
+                        android:padding="@dimen/auc_btn_padding"
+
+
+                        android:text="Auction Assistant"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/auc_btn_txt_size"
+                        app:textfont="@string/auc_btn_font"
+
+
+                        />
+
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/tv_btn_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/manage_your_team_amp_auction"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        app:textfont="Lato-Bold.ttf" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_auction_team_pdf_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_auction_trans"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_16dp"
+                android:visibility="gone"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_15dp"
+                    android:layout_weight="1"
+                    android:text="View the selected players of all team after deadline. No team changes post that. "
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    app:textfont="Lato-Medium.ttf" />
+
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_view_team_btn"
+                    style="@style/default_ripple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/bg_auc_btn"
+                    android:gravity="center"
+                    android:padding="@dimen/auc_btn_padding"
+                    android:paddingLeft="@dimen/dimen_20dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="@dimen/dimen_20dp"
+                    android:paddingBottom="5dp"
+                    android:text="View Teams"
+                    android:textAllCaps="true"
+
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/auc_btn_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="@string/auc_btn_font"
+
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="@dimen/dimen_16dp"
+
+
+                android:layout_marginRight="24dp"
+                android:background="@drawable/bg_auction_trans"
+                android:gravity="center_vertical"
+                android:weightSum="100">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_team_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:layout_weight="70"
+                    android:paddingLeft="60dp"
+                    android:text="Team"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ag_title_bar_txt_size"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:gravity="end"
+                    android:paddingRight="@dimen/dimen_5dp"
+                    android:text="Rank"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ag_title_bar_txt_size"
+                    app:textfont="Lato-Bold.ttf" />
+
+
+            </LinearLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_users"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/adapter_auction_leaderboard_lobby_item">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>
+
+
+

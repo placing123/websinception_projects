@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_title"
+                style="@style/rippleStyleTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium"
+                app:rd_enable="false"
+                app:textAllCaps="true"
+                app:textfont="light" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#F3F3F3"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/captain"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:rd_enable="false"
+                    app:textAllCaps="true"
+                    app:textfont="@string/semiBold"/>
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_captain"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_medium"
+                    app:rd_enable="false"
+                    app:textfont="@string/MONTSERRAT_REGULAR" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/item_offset_1"
+                android:layout_height="match_parent"
+                android:background="@color/colorControlNormal" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/vice_captain"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:rd_enable="false"
+                    app:textAllCaps="true"
+                    app:textfont="@string/semiBold" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_vice_captain"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium"
+                    app:rd_enable="false"
+                    app:textfont="@string/MONTSERRAT_REGULAR" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_height="@dimen/item_offset_1"
+            android:layout_width="match_parent"
+            android:background="@color/colorControlNormal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/ll_wk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/WK"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="WK"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_small"
+                    app:rd_enable="false"
+                    app:textfont="@string/semiBold" />
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.websinception.megastar.customView.CustomImageView
+                        android:id="@+id/civ_wk"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/circle_white_border_light"
+                        app:actualImageScaleType="fitCenter"
+                        app:fadeDuration="500"
+                        app:failureImage="@drawable/ic_wk"
+                        app:placeholderImage="@drawable/ic_wk"
+                        app:roundAsCircle="true"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:id="@+id/ic_wk"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="@dimen/margin_5"
+                        android:layout_margin="@dimen/margin_5"
+                        android:background="@drawable/circle_player_role_on"
+                        android:src="@drawable/ic_wk"/>
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_wk"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/circle_blue_bg_white"
+                        android:gravity="center"
+                        android:text="9"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small_11sp"
+                        app:textfont="light"
+                        app:srcCompat="@drawable/ic_camera" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/BAT"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="BAT"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_small"
+                    app:rd_enable="false"
+                    app:textfont="@string/semiBold" />
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.websinception.megastar.customView.CustomImageView
+                        android:id="@+id/civ_bat"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/circle_white_border_light"
+                        android:padding="2dp"
+                        app:actualImageScaleType="fitCenter"
+                        app:fadeDuration="500"
+                        app:failureImage="@drawable/ic_bat"
+                        app:placeholderImage="@drawable/ic_bat"
+                        android:visibility="gone"
+                        app:roundAsCircle="true" />
+                    <ImageView
+                        android:id="@+id/ic_bat"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="@dimen/margin_5"
+                        android:layout_margin="@dimen/margin_5"
+                        android:background="@drawable/circle_player_role_on"
+                        android:src="@drawable/ic_bat"/>
+
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_bat"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/circle_blue_bg_white"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/ic_camera"
+                        android:text="9"
+                        app:textfont="light"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small_11sp" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/ll_ar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/AR"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="AR"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_small"
+                    app:rd_enable="false"
+                    app:textfont="@string/semiBold" />
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.websinception.megastar.customView.CustomImageView
+                        android:id="@+id/civ_ar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/circle_white_border_light"
+                        android:padding="2dp"
+                        app:actualImageScaleType="fitCenter"
+                        app:fadeDuration="500"
+                        app:failureImage="@drawable/ic_allrounder"
+                        app:placeholderImage="@drawable/ic_allrounder"
+                        app:roundAsCircle="true"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:id="@+id/ic_allrounder"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="@dimen/margin_5"
+                        android:layout_margin="@dimen/margin_5"
+                        android:background="@drawable/circle_player_role_on"
+                        android:src="@drawable/ic_allrounder"/>
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_ar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/circle_blue_bg_white"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/ic_camera"
+                        android:text="9"
+                        app:textfont="light"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small_11sp" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bowl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/BOWL"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="BOWL"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_small"
+                    app:rd_enable="false"
+                    app:textfont="@string/semiBold" />
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.websinception.megastar.customView.CustomImageView
+                        android:id="@+id/civ_bowl"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/circle_white_border_light"
+                        android:padding="2dp"
+                        app:actualImageScaleType="fitCenter"
+                        app:fadeDuration="500"
+                        app:failureImage="@drawable/ic_bowl"
+                        app:placeholderImage="@drawable/ic_bowl"
+                        app:roundAsCircle="true"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/ic_bowl"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="@dimen/margin_5"
+                        android:layout_margin="@dimen/margin_5"
+
+                        android:background="@drawable/circle_player_role_on"
+                        android:src="@drawable/ic_bowl"/>
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_bowl"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/circle_blue_bg_white"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/ic_camera"
+                        android:text="9"
+                        app:textfont="light"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small_11sp" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_offset_1"
+            android:background="@color/colorControlNormal" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="3">
+        <LinearLayout
+            android:id="@+id/ll_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+            <com.websinception.megastar.customView.CustomTextView
+                style="@style/rippleStyleTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit"
+                android:textColor="@color/secondary_txt_color"
+                android:drawablePadding="5dp"
+                app:drawableLeftCompat="@drawable/ic_edit"
+                android:textSize="@dimen/text_medium"
+                app:rd_enable="false"
+                app:textAllCaps="true"
+                app:textfont="light" />
+        </LinearLayout>
+        <View
+            android:layout_width="@dimen/item_offset_1"
+            android:layout_height="match_parent"
+            android:background="@color/colorControlNormal" />
+        <LinearLayout
+            android:id="@+id/ll_preview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+            <com.websinception.megastar.customView.CustomTextView
+                style="@style/rippleStyleTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/preview"
+                android:drawableTint="@color/colorPrimary"
+                android:textColor="@color/secondary_txt_color"
+                android:drawablePadding="5dp"
+                app:drawableLeftCompat="@drawable/ic_preview"
+                android:textSize="@dimen/text_medium"
+                app:rd_enable="false"
+                app:textAllCaps="true"
+                app:textfont="light" />
+        </LinearLayout>
+        <View
+            android:layout_width="@dimen/item_offset_1"
+            android:layout_height="match_parent"
+            android:background="@color/colorControlNormal" />
+        <LinearLayout
+            android:id="@+id/ll_copy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+            <com.websinception.megastar.customView.CustomTextView
+                android:drawableTint="@color/colorPrimary"
+                style="@style/rippleStyleTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clone"
+                android:drawablePadding="5dp"
+                app:drawableLeftCompat="@drawable/ic_copy"
+                android:textColor="@color/secondary_txt_color"
+                android:textSize="@dimen/text_medium"
+                app:rd_enable="false"
+                app:textAllCaps="true"
+                app:textfont="light" />
+        </LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

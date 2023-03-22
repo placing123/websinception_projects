@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/auction_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:elevation="@dimen/margin_5"
+            android:gravity="center"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_change_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/ic_back" />
+
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/title"
+                        android:layout_width="95dp"
+                        android:layout_height="20dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/fantasy_logo_text" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:id="@+id/ctv_game_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AUCTION"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        app:textAllCaps="true"
+                        app:textfont="Futuxkci_1.ttf" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <include layout="@layout/auction_series_info" />
+
+
+        <RelativeLayout
+            android:id="@+id/shortingLin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fl_auction_series_info_root"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="1">
+
+                <com.websinception.megastar.customView.CustomTextView
+
+                    android:id="@+id/playerText"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/players"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ag_title_bar_txt_size"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/l2"
+                android:layout_weight="1">
+
+                <com.websinception.megastar.customView.CustomTextView
+
+                    android:id="@+id/selected_by"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/l1"
+                    android:layout_marginRight="@dimen/dimen_15dp"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/selected_by"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ag_title_bar_txt_size"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/l2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/points"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_2dp"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/Scored"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ag_title_bar_txt_size"
+                    app:textfont="Lato-Bold.ttf"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/shortingLin"
+            android:visibility="visible">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ll_bottom_tab"
+                android:layout_marginLeft="@dimen/dimen_16dp"
+                android:layout_marginRight="@dimen/dimen_16dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_5">
+
+                <ImageView
+                    android:id="@+id/iv_player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ctv_player_name"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_toRightOf="@+id/sdv"
+                    app:srcCompat="@drawable/your_player" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/your_players"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_small"
+
+                    app:textfont="Lato-Medium.ttf" />
+
+                <ImageView
+                    android:id="@+id/iv_top_player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ctv_player_name"
+
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_toRightOf="@+id/iv_player"
+                    app:srcCompat="@drawable/top_player" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/top_players"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_small"
+
+                    app:textfont="Lato-Medium.ttf" />
+
+
+            </LinearLayout>
+
+
+            <include
+                layout="@layout/loader_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ll_bottom_tab"
+                android:layout_marginLeft="@dimen/dimen_16dp"
+                android:layout_marginRight="@dimen/dimen_16dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

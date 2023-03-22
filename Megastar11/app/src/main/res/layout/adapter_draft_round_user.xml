@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_root"
+    android:layout_width="80dp"
+    android:layout_height="50dp"
+    android:layout_marginLeft="@dimen/dimen_5dp"
+    android:layout_marginRight="@dimen/dimen_5dp"
+    android:background="@drawable/draft_user_inactive"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <FrameLayout
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+
+        <com.websinception.megastar.customView.CustomImageView
+            android:id="@+id/civ_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            app:backgroundImage="@color/black"
+            app:placeholderImage="@drawable/player"
+            app:roundAsCircle="true" />
+
+        <ImageView
+            android:layout_gravity="right"
+            android:id="@+id/iv_indicator"
+            android:layout_width="@dimen/dimen_10dp"
+            android:layout_height="@dimen/dimen_10dp" />
+
+    </FrameLayout>
+
+
+    <com.websinception.megastar.customView.CustomTextView
+        android:id="@+id/ctv_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:text="Rahul Pareta"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        app:textfont="normal" />
+
+</LinearLayout>

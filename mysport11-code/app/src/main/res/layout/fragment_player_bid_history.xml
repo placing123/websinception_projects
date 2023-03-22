@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_data_root"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_margin="@dimen/dimen_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_auction_trans"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:weightSum="100">
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:paddingLeft="@dimen/dimen_70dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:text="Manager\nName"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_title_bar_txt_size"
+                app:textfont="Lato-Bold.ttf" />
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:text="Bid\nValue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_title_bar_txt_size"
+                app:textfont="Lato-Bold.ttf"/>
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:text="Time\n"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_title_bar_txt_size"
+                app:textfont="Lato-Bold.ttf" />
+
+        </LinearLayout>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_order"
+                tools:listitem="@layout/adapter_auction_bid_history_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+
+
+    <com.mw.fantasy.customView.CustomTextView
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:id="@+id/ctv_value_label"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:text="No Player Purchased yet!"
+        android:gravity="center"
+        app:textfont="Lato-Black.ttf"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_auction_trans"
+        android:visibility="gone"
+        android:textSize="@dimen/primary_txt_size"
+        android:textColor="@color/white"
+        android:layout_height="60dp" />
+
+
+    <include layout="@layout/auction_trans_loader_layout"
+        android:visibility="gone"/>
+
+</RelativeLayout>

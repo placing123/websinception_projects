@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_root"
+    android:layout_marginRight="@dimen/dimen_16dp"
+    android:layout_marginLeft="@dimen/dimen_16dp"
+    android:background="@drawable/bg_auction_trans"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_10dp"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <FrameLayout
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:layout_width="@dimen/dimen_50dp"
+                android:layout_height="@dimen/dimen_50dp">
+                <com.websinception.megastar.customView.CustomImageView
+                    android:id="@+id/civ_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:backgroundImage="@color/white"
+                    app:placeholderImage="@drawable/player"
+                    app:roundAsCircle="true" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_position_indicator"
+                    android:src="@drawable/c"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp" />
+
+            </FrameLayout>
+
+
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:text="Upcoming"
+                android:textColor="@color/white"
+                android:textSize="@dimen/secondary_txt_size"
+                app:textfont="normal" />
+
+        </LinearLayout>
+
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:gravity="center"
+            android:text="Upcoming"
+            android:textColor="@color/white"
+            android:textSize="@dimen/secondary_txt_size"
+            app:textfont="normal" />
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_total_point"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="Upcoming"
+            android:textColor="@color/white"
+            android:textSize="@dimen/secondary_txt_size"
+            app:textfont="normal" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hi_main_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_5"
+    app:cardElevation="@dimen/elevation_4"
+    android:orientation="vertical"
+    android:background="@color/white"
+    app:contentPadding="@dimen/dimen_12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/total_winnings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_winnings"
+                        android:textColor="@color/black"
+                        android:textSize="9sp"
+                        app:textfont="@string/MONTSERRAT_REGULAR" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/total_winnings_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+
+                        android:text="15 Lakhs"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_small"
+                        app:textfont="@string/MONTSERRAT_REGULAR" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/winners"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/winners"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="9sp"
+                        app:textfont="@string/MONTSERRAT_REGULAR" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/winnersCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_small"
+                        app:textfont="@string/MONTSERRAT_REGULAR" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/entry_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/entry_fee"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="9sp"
+                        app:textfont="@string/MONTSERRAT_REGULAR" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/entry_fee_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:text="499"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textsize_small"
+                        app:textfont="@string/MONTSERRAT_REGULAR" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/joinedWith"
+
+                        android:textColor="@color/warm_grey"
+                        android:textSize="9sp"
+                        app:textfont="@string/MONTSERRAT_REGULAR" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/teamName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:text="Team 1"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textsize_small"
+                        app:textfont="@string/MONTSERRAT_REGULAR" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pointsCAP"
+
+                        android:textColor="@color/warm_grey"
+
+                        android:textSize="9sp"
+                        app:textfont="@string/MONTSERRAT_REGULAR" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+
+                        android:drawablePadding="@dimen/margin_5"
+                        android:text="221.1"
+                        android:textColor="@color/textColor"
+
+
+                        android:textSize="@dimen/textsize_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rankCap"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="9sp"
+                        app:textfont="@string/MONTSERRAT_REGULAR" />
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:text="#499"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textsize_small"
+                        app:textfont="@string/MONTSERRAT_REGULAR" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_offset_1px"
+            android:background="@color/warm_grey"
+            android:layout_marginTop="@dimen/dimen_10dp"/>
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/your_winnings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Your Winnings"
+            android:gravity="center"
+            android:padding="@dimen/margin_5"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/dimen_12dp" />
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_offset_1px"
+            android:background="@color/warm_grey"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="horizontal">
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/viewLeaderBoard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/viewLeaderBoard"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12dp"
+                app:drawableRightCompat="@drawable/ic_arrow"
+                app:textfont="@string/MONTSERRAT_REGULAR" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

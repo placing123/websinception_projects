@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/demo_splash"
+    tools:context=".UI.splash.SplashActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/fantasy_logo_text"
+            android:visibility="gone" />
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:padding="@dimen/_8sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:text="This game involves an element of financial risk and may be addictive. Please play responsibly at your own risk. The game is applicable for people above 18 only."
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            app:textfont="MONTSERRAT_REGULAR"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

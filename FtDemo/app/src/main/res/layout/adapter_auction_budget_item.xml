@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginRight="@dimen/dimen_16dp"
+    android:layout_marginLeft="@dimen/dimen_16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_auction_trans"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_10dp"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="@dimen/dimen_60dp">
+                <com.mw.fantasy.customView.CustomImageView
+                    android:id="@+id/civ_pic"
+                    android:layout_width="@dimen/dimen_60dp"
+                    android:layout_height="@dimen/dimen_60dp"
+                    app:backgroundImage="@color/white"
+                    app:placeholderImage="@drawable/player"
+                    app:roundAsCircle="true" />
+                <ImageView
+                    android:id="@+id/iv_indicator"
+                    android:layout_width="@dimen/dimen_10dp"
+                    android:layout_height="@dimen/dimen_10dp" />
+            </FrameLayout>
+
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:id="@+id/ctv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:text="Upcoming"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_list_item_title_txt_size"
+                app:textfont="Lato-Bold.ttf" />
+
+        </LinearLayout>
+
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_budget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:gravity="center"
+            android:text="Upcoming"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ag_list_item_title_txt_size"
+            app:textfont="Lato-Bold.ttf" />
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="100 Lacs"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ag_list_item_title_txt_size"
+            app:textfont="Lato-Bold.ttf" />
+
+    </LinearLayout>
+</LinearLayout>

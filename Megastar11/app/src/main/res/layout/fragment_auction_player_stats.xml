@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".UI.auction.playerpoint.AuctionPlayerStatsFragment">
+
+        <com.websinception.megastar.customView.CustomTextView
+            style="@style/rippleStyleTransparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:padding="@dimen/dimen_10dp"
+            android:text="Player Performance"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:rd_enable="false"
+            app:textAllCaps="true"
+            app:textfont="Lato-Bold.ttf" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@drawable/bg_auction_trans"
+            android:elevation="10dp"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/ll_fielding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_5dp"
+                android:weightSum="4">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="@string/type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="CT"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="ST"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="4">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="@string/odi"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_no_stats_fielding_odi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="No stats available"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    android:visibility="gone"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/odi_field_catches"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/odi_field_st"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/ctv_date"
+                android:background="@color/gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="4">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="@string/t20"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_no_stats_fielding_t20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="No stats available"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    android:visibility="gone"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/t20_field_catches"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/t20_field_st"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/ctv_date"
+                android:background="@color/gray"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="4">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="@string/test"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_no_stats_fielding_test"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="No stats available"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    android:visibility="gone"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/test_field_catches"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/test_field_st"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/ctv_date"
+                android:background="@color/gray"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="4">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="T10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_no_stats_fielding_t10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="No stats available"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    android:visibility="gone"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/t10_field_catches"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/t10_field_st"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_batting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_5dp"
+                android:weightSum="4">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="@string/type"
+                    android:textColor="@color/black"
+
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+
+                    android:text="@string/avg"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+
+                    android:text="@string/str"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="@string/runs"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="4">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="@string/odi"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_no_stats_batting_odi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="No stats available"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    android:visibility="gone"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/odi_bat_avg"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/odi_bat_str"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/odi_bat_runs"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/ctv_date"
+                android:background="@color/gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="4">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="@string/t20"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_no_stats_batting_t20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="No stats available"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    android:visibility="gone"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/t20_bat_avg"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/t20_bat_str"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/t20_bat_runs"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/ctv_date"
+                android:background="@color/gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="4">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="@string/test"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_no_stats_batting_test"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="No stats available"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    android:visibility="gone"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/test_bat_avg"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/test_bat_str"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/test_bat_runs"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/ctv_date"
+                android:background="@color/gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="4">
+
+                <com.websinception.megastar.customView.CustomTextView
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="T10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_no_stats_batting_t10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="No stats available"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    android:visibility="gone"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/t10_bat_avg"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/t10_bat_str"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/t10_bat_runs"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="--"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/ctv_player_name"
+            style="@style/rippleStyleTransparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:padding="@dimen/dimen_10dp"
+            android:text="Match Wise Player Selection"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:rd_enable="false"
+            app:textAllCaps="true"
+            app:textfont="Lato-Bold.ttf" />
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@drawable/bg_auction_trans"
+            android:padding="@dimen/dimen_5dp">
+
+            <com.websinception.megastar.customView.CustomTextView
+                style="@style/SignUPCustomEditTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:padding="@dimen/dimen_5dp"
+                android:text="@string/matches"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_list_item_title_txt_size"
+                app:textfont="Lato-Bold.ttf" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/selected_sort"
+                style="@style/SignUPCustomEditTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:padding="@dimen/dimen_5dp"
+                android:text="@string/selected_by"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_list_item_title_txt_size"
+                app:textfont="Lato-Bold.ttf" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/points_sort"
+                style="@style/SignUPCustomEditTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_30dp"
+                android:layout_toLeftOf="@+id/selected_sort"
+                android:padding="@dimen/dimen_5dp"
+                android:text="@string/points"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_list_item_title_txt_size"
+                app:textfont="Lato-Bold.ttf" />
+
+        </RelativeLayout>
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:id="@+id/stats_not_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/dimen_40dp"
+            android:gravity="center"
+
+            android:padding="@dimen/dimen_10dp"
+            android:text="Data not found"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_medium"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:drawableTopCompat="@drawable/ic_trophy" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:nestedScrollingEnabled="false">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

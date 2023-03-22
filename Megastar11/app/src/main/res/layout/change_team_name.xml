@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:background="@color/default_background"
+    android:layout_height="match_parent"
+    tools:context=".UI.changeTeamName.ChangeTeamName">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_10dp">
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/noRanking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/keepthisInMind"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_small"
+                app:textfont="@string/light" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/itsPermanenet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_small"
+                android:visibility="gone"
+                app:textfont="bold" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/yourTeamNameCan"
+                android:textColor="@color/lightYellow"
+                android:textSize="@dimen/textsize_small"
+                android:visibility="gone"
+                app:textfont="light" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/ItsYourIdentity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_small"
+                app:textfont="@string/light" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/yourTeamNameIs"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_small"
+                app:textfont="light" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/choosingName"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_small"
+                app:textfont="@string/light" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/mininmum6Charecters"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_small"
+                app:textfont="light" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/cardMargin"
+            app:cardElevation="@dimen/cardElvation"
+            app:contentPadding="@dimen/containPadding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.websinception.megastar.customView.CustomInputEditText
+                    android:id="@+id/teamNameEt"
+                    style="@style/SignUPCustomEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enteryourTeamName"
+
+                    android:imeActionLabel="Done"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPersonName"
+                    android:maxLength="50"
+                    android:padding="@dimen/login_form_edt_padding"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorControlNormal"
+                    android:textSize="@dimen/edt_txt_size_normal"
+                    app:hintfont="normal"
+                    app:textfont="normal" />
+
+                <com.websinception.megastar.customView.CustomTextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:text="@string/mininmum6Charecters"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textsize_too_small"
+                    app:textfont="light" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/saveTeamName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/greenstyle_button"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/saveTeamName"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_small"
+                    app:rd_enable="true"
+                    app:textfont="light" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

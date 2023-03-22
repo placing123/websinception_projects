@@ -1,0 +1,128 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/white_popup"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/black_popup"
+                android:layout_height="match_parent">
+
+
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/menu"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_toEndOf="@+id/back"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    app:srcCompat="@drawable/fantasy_logo_text" />
+
+            </RelativeLayout>
+
+
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/head_mesge"
+                style="@style/rippleStyleTransparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/login_form_edt_padding"
+                android:paddingBottom="@dimen/login_form_edt_padding"
+                android:text="@string/bravo"
+                android:textColor="@color/black"
+                android:background="@color/very_light_blue"
+                android:textSize="@dimen/_14ssp"
+                app:rd_enable="true"
+                app:textfont="@string/REGULAR" />
+
+
+            <ImageView
+                android:id="@+id/img_view"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_130sdp"
+                android:src="@drawable/cash_image"/>
+
+
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_message"
+                style="@style/rippleStyleTransparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:gravity="center"
+                android:text="@string/updateAvailableMessage"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:rd_enable="true"
+                app:textfont="@string/REGULAR" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_save"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/shedow_yellow_background"
+                    android:gravity="center"
+                    android:text="Ok"
+                    android:padding="@dimen/_8sdp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:textSize="@dimen/primary_txt_size"
+                    app:rd_enable="true"
+                    app:textfont="normal" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_cross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_close" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

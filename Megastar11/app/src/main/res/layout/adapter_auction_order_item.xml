@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_root"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@drawable/bg_auction_trans"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_10dp"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.websinception.megastar.customView.CustomImageView
+                android:id="@+id/civ_pic"
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="@dimen/dimen_60dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                app:backgroundImage="@color/white"
+                app:placeholderImage="@drawable/player"
+                app:roundAsCircle="true" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="VIRAT KOHLI"
+                    app:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ag_list_item_title_txt_size"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    app:textAllCaps="true"
+                    android:text="IND - BAT"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/ag_list_item_dsc_txt_size"
+                    app:textfont="Lato-Medium.ttf" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="30"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Upcoming"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_list_item_title_txt_size"
+                app:textfont="Lato-Bold.ttf" />
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_buyer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_list_item_dsc_txt_size"
+                app:textfont="Lato-Medium.ttf" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="100 Lacs"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_list_item_title_txt_size"
+                app:textfont="Lato-Bold.ttf" />
+            <com.websinception.megastar.customView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_list_item_dsc_txt_size"
+                app:textfont="Lato-Medium.ttf" />
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

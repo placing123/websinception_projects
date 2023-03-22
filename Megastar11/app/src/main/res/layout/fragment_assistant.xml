@@ -1,0 +1,162 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/ll_data_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/ll_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:background="@drawable/yello_border"
+                    android:layout_margin="@dimen/dimen_16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_auction_trans"
+                        android:padding="@dimen/dimen_10dp">
+
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:id="@+id/ctv_assistant_status"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:text="Assistant is Disabled"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/primary_txt_size"
+                            app:textfont="Lato-Black.ttf" />
+
+                        <com.rey.material.widget.Switch
+                            android:id="@+id/switch_assistant"
+                            style="@style/Material.Widget.Switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            app:sw_thumbColor="@drawable/assistant_switch_color" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/divider_color"/>
+
+                <LinearLayout
+                    android:layout_margin="@dimen/dimen_16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_auction_trans"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dimen_10dp">
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:layout_marginLeft="70dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Wish List"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ag_title_bar_txt_size"
+                        app:textfont="Lato-Bold.ttf" />
+
+
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/ctv_value_label"
+                        android:layout_marginRight="22dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Preference No."
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ag_title_bar_txt_size"
+                        app:textfont="Lato-Bold.ttf" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_assistant"
+                    tools:listitem="@layout/adapter_auction_assistant_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:layout_margin="@dimen/dimen_16dp"
+                android:id="@+id/ctv_no_player_label"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:text="No Player Selected"
+                android:gravity="center"
+                app:textfont="Lato-Black.ttf"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_auction_trans"
+                android:visibility="gone"
+                android:textSize="@dimen/primary_txt_size"
+                android:textColor="@color/white"
+                android:layout_height="60dp" />
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:background="@color/black"
+            android:id="@+id/rl_bottom_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_btn_add_players"
+                style="@style/default_ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                app:textAllCaps="true"
+                android:text="ADD SQUAD"
+                android:textColor="@color/black"
+
+                android:background="@drawable/bg_auc_btn"
+                app:textfont="@string/auc_btn_font"
+                android:textSize="@dimen/auc_btn_txt_size"
+                android:padding="@dimen/auc_btn_padding"
+
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/auction_trans_loader_layout"
+        android:visibility="gone"/>
+
+</RelativeLayout>

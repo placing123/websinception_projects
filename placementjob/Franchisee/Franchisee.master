@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Franchisee.master.cs" Inherits="Franchisee_Franchisee" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Form Filling</title>
+
+    <link href="css/style1.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="../js/jquery.reveal.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#button').click(function (e) { // Button which will activate our modal
+                $('#modal').reveal({ // The item which will be opened with reveal
+                    animation: 'fade',                   // fade, fadeAndPop, none
+                    animationspeed: 300,                       // how fast animtions are
+                    closeonbackgroundclick: true,              // if you click background will modal close?
+                    dismissmodalclass: 'close'    // the class of a button or element that will close an open modal
+                });
+                return false;
+            });
+        });
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-49728426-1', 'national-bpo.com');
+        ga('send', 'pageview');
+
+    </script>
+
+    <style type="text/css">
+        .style1 {
+            color: #000000;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="main">
+            <div class="top_bg">
+                <div class="margin">
+                    <div class="top">
+                        <div class="top_min">
+                            <div class="top_logo">
+                            </div>
+                            <div class="top_txt">
+                                <a href="Logout.aspx" class="black_11">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_bg">
+                <div class="margin">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="Home.aspx">Home</a></li>
+                            <li><a href="Customer_Reg.aspx">Registration</a></li>
+                            <li><a href="Plan.aspx">PLAN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mid_bg">
+                <div class="margin">
+                    <div class="mid" style="border: 1px solid #353535">
+                        <div class="mid_min">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bot_bg">
+                <div class="margin">
+                    <div class="bot"><span class="style1">Copyright © 2018 All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

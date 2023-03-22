@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="32dp"
+    android:layout_marginRight="32dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dimen_8dp"
+            android:id="@+id/iv_logo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/ic_cup" />
+
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_logo"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/ctv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contest For champion"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:textfont="Lato-Black.ttf" />
+
+            <com.websinception.megastar.customView.CustomTextView
+                android:id="@+id/ctv_desc"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ctv_title" android:text="Contest For champion"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:textfont="Lato-Bold.ttf"/>
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_offset_1px"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/white" />
+
+
+</LinearLayout>

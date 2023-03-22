@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_16dp"
+    android:layout_marginRight="@dimen/dimen_16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:padding="@dimen/dimen_10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.websinception.megastar.customView.CustomImageView
+                android:id="@+id/civ_pic"
+                android:layout_width="@dimen/dimen_50dp"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                app:backgroundImage="@color/black"
+                app:placeholderImage="@drawable/player"
+                app:roundAsCircle="true" />
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="Upcoming"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/secondary_txt_size"
+                    app:textfont="normal" />
+
+                <com.websinception.megastar.customView.CustomTextView
+                    android:id="@+id/ctv_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="IND - BAT"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/secondary_txt_size"
+                    app:textfont="normal" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <Spinner
+            android:id="@+id/cs_bid_value"
+
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_spinner_auction_assistant"
+            />
+
+
+        <ImageView
+            android:scaleType="center"
+            android:layout_weight="10"
+            android:id="@+id/iv_cross"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:tint="@color/green"
+            app:srcCompat="@drawable/ic_add_button" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/divider_color"
+        android:layout_height="@dimen/dimen_1dp"/>
+
+</LinearLayout>

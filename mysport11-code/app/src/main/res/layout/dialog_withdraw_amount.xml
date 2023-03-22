@@ -1,0 +1,359 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyt_text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_background"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:padding="@dimen/margin_5"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_back" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:padding="@dimen/margin_5"
+                android:visibility="visible"
+                app:srcCompat="@drawable/fantasy_logo_text" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="Your winnings"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:rd_enable="true" />
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/winning_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="Amount"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:rd_enable="true" />
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_15dp"
+                app:cardElevation="@dimen/margin_5"
+                app:contentPadding="@dimen/margin_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight=".3"
+                        android:tint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_bank" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:layout_weight="1.7"
+                        android:orientation="vertical">
+
+
+                        <com.mw.fantasy.customView.CustomTextView
+                            android:id="@+id/bank_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:padding="@dimen/margin_5"
+                            android:text="@string/withdraw_your_winnings"
+                            android:textColor="@color/greyis_brown"
+                            android:textSize="@dimen/primary_txt_size"
+                            app:rd_enable="true" />
+
+                        <com.mw.fantasy.customView.CustomTextView
+                            android:id="@+id/ctv_account_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="@dimen/margin_5"
+                            android:paddingRight="@dimen/margin_5"
+                            android:paddingBottom="@dimen/margin_5"
+                            android:text="@string/withdraw_your_winnings"
+                            android:textColor="@color/greyis_brown"
+                            android:textSize="@dimen/primary_txt_size"
+                            app:rd_enable="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <com.mw.fantasy.customView.CustomTextView
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/login_form_edt_padding"
+                    android:paddingBottom="@dimen/login_form_edt_padding"
+                    android:text="@string/withdraw_your_winnings"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primary_txt_size"
+                    android:visibility="gone"
+                    app:rd_enable="true"
+                    app:textfont="bold" />
+
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="@dimen/margin_5"
+                    android:paddingRight="@dimen/margin_5"
+                    android:text="Amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12sp"
+                    app:rd_enable="true" />
+
+                <com.mw.fantasy.customView.CustomEditText
+                    android:id="@+id/edt_mood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_txt_form_bg_inner"
+                    android:hint="@string/ex_amount"
+                    android:imeActionLabel="Done"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:padding="@dimen/dimen_10dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/edt_txt_size_normal" />
+
+
+                <com.mw.fantasy.customView.CustomTextView
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:text="@string/maximum_amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/secondary_txt_size"
+                    android:visibility="gone"
+                    app:rd_enable="true"
+                    app:textfont="light" />
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_15dp"
+                    android:text="Amount"
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/dimen_12sp"
+                    app:rd_enable="true" />
+
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="@dimen/margin_5"
+                    android:paddingRight="@dimen/margin_5"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:text="Transfer To"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primary_txt_size"
+                    app:rd_enable="true" />
+
+                <RadioGroup
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.mw.fantasy.customView.CustomRadioButton
+                        android:id="@+id/rb_bank"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="Bank"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:theme="@style/RadioButtonStyle" />
+
+                    <com.mw.fantasy.customView.CustomRadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Paytm"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:theme="@style/RadioButtonStyle" />
+
+                </RadioGroup>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_mobile_no_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:background="@drawable/bg_paytm_no"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.mw.fantasy.customView.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:text="Registered Number"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:rd_enable="true" />
+
+                        <com.mw.fantasy.customView.CustomTextView
+                            android:id="@+id/edt_phoneno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:rd_enable="true" />
+
+                    </LinearLayout>
+
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/ctv_change_no"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/shedow_yellow_background"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Change No"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/primary_txt_size"
+                        app:rd_enable="true"
+                        app:textfont="light" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_cross"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_blue"
+                android:padding="8dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_cross" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_20"
+        android:orientation="horizontal">
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/shedow_yellow_background"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/continue_"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_txt_size"
+            app:rd_enable="true"
+            app:textfont="light" />
+    </LinearLayout>
+
+
+</RelativeLayout>

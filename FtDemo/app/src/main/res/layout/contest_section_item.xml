@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/contest_Icon"
+                    android:layout_width="@dimen/contest_icon_size"
+                    android:layout_height="@dimen/contest_icon_size"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    app:placeholderImage="@drawable/crown"
+                    app:placeholderImageScaleType="centerInside"
+                    app:roundAsCircle="true"
+                    app:roundingBorderWidth="0dp"
+                    app:srcCompat="@drawable/crown" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/contestTypeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/hot_contest"
+                    android:textColor="@color/darkblack"
+                    android:textSize="16sp"
+                    app:textfont="@string/semiBold" />
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/contestTypeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/hot_contest_des"
+                    android:textColor="@color/darkblack"
+                    android:textSize="@dimen/textsize_small" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleViewContest"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/contest_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:drawablePadding="@dimen/margin_5"
+            android:drawableTint="@color/contest_blue"
+            android:gravity="end"
+            android:text="@string/moreContest"
+            android:textAlignment="textEnd"
+            android:textColor="@color/contest_blue"
+            android:textSize="@dimen/textsize_small"
+            app:drawableRightCompat="@drawable/ic_arrow"
+            app:textfont="light" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

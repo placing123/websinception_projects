@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/preview_img"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_team"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toStartOf="@+id/ivLogo"
+            android:layout_toLeftOf="@+id/ivLogo"
+            android:ellipsize="end"
+            android:text="@string/team_1"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:rd_enable="true"
+            app:textfont="bold" />
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:padding="3dp"
+            android:src="@drawable/fantasy_logo_text"
+            android:visibility="gone"
+            android:textSize="@dimen/text_medium" />
+
+        <ImageView
+            android:id="@+id/ctv_edit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ctv_cross"
+            android:layout_toStartOf="@+id/ctv_cross"
+            android:padding="5dp"
+
+            android:textSize="@dimen/text_medium"
+            android:visibility="gone"
+            android:tint="@color/white" />
+
+
+        <ImageView
+            android:id="@+id/ctv_refresh"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ctv_cross"
+            android:layout_toStartOf="@+id/ctv_cross"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_refresh_button"
+            android:textSize="@dimen/text_medium"
+            android:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/ctv_cross"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_cross"
+            android:textSize="@dimen/text_medium"
+            android:tint="@color/white" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/bottamRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/totalPoints"
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_5"
+
+                    android:text="0"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/text_large"
+                    app:rd_enable="false"
+                    android:textColor="#FFFFFF"
+                    app:textfont="@string/MONTSERRAT_BOLD" />
+                <com.mw.fantasy.customView.CustomTextView
+
+                    style="@style/rippleStyleTransparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/total_points"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/textsize_too_small"
+                    app:rd_enable="false"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="@dimen/margin_5"
+                    app:textfont="@string/MONTSERRAT_REGULAR" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:visibility="gone"
+            android:contentDescription="@null"
+            android:layout_margin="@dimen/margin_5"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_pitch"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+
+           /><!--
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_above="@+id/bottamRel"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+
+            <com.mw.fantasy.customView.CustomTextView
+                style="@style/rippleStyleTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/wicket_keeper"
+
+                android:textAllCaps="true"
+                android:textSize="@dimen/textsize_too_small"
+                app:rd_enable="false"
+                android:textColor="@color/white"
+                app:textfont="@string/MONTSERRAT_REGULAR" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_wicket_keeper"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                tools:listitem="@layout/list_item_players_preview" />
+
+
+            <com.mw.fantasy.customView.CustomTextView
+                style="@style/rippleStyleTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/batsmen"
+                android:layout_marginTop="5dp"
+
+                android:textAllCaps="true"
+                android:textSize="@dimen/textsize_too_small"
+                app:rd_enable="false"
+                android:textColor="@color/white"
+                app:textfont="@string/MONTSERRAT_REGULAR"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_batsmen"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                tools:listitem="@layout/list_item_players_preview" />
+
+            <com.mw.fantasy.customView.CustomTextView
+                style="@style/rippleStyleTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/all_rounders"
+                android:layout_marginTop="5dp"
+
+                android:textAllCaps="true"
+                android:textSize="@dimen/textsize_too_small"
+                app:rd_enable="false"
+                android:textColor="@color/white"
+                app:textfont="@string/MONTSERRAT_REGULAR" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_all_rounders"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                tools:listitem="@layout/list_item_players_preview" />
+
+            <com.mw.fantasy.customView.CustomTextView
+                style="@style/rippleStyleTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/bowlers"
+                android:layout_marginTop="5dp"
+
+                android:textAllCaps="true"
+                android:textSize="@dimen/textsize_too_small"
+                app:rd_enable="false"
+                android:textColor="@color/white"
+                app:textfont="@string/MONTSERRAT_REGULAR"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_bowlers"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                tools:listitem="@layout/list_item_players_preview" />
+        </LinearLayout><!--
+    </android.support.v4.widget.NestedScrollView>-->
+    </RelativeLayout>
+</LinearLayout>

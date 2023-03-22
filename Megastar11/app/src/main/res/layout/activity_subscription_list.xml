@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.subscription.SubscriptionListActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewTopLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.websinception.megastar.customView.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/_8sdp"
+            android:singleLine="true"
+            android:text="Choose the subscription plan"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:textfont="@string/MONTSERRAT_REGULAR" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cardViewTopLabel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginLeft="@dimen/dimen_30dp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/dimen_30dp"
+                android:src="@drawable/dfs" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardViewSubscriptionInfoRoot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_16sdp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutCurrentSubscriptionInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="Current Subscription Details"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:textfont="@string/bold" />
+
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:id="@+id/customTextViewSubscriptionDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:includeFontPadding="false"
+                            android:text="Current Subscription Details"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8ssp"
+                            app:textfont="light" />
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/app_button_red"
+                            android:gravity="center"
+                            android:padding="@dimen/_4sdp"
+                            android:text="Current Plan"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp"
+                            app:textfont="@string/bold" />
+
+                        <com.websinception.megastar.customView.CustomTextView
+                            android:id="@+id/customTextViewSubscriptionDays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8ssp"
+                            android:text="20"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_12ssp"
+                            app:textfont="bold" />
+                    </LinearLayout>
+
+
+                    <com.websinception.megastar.customView.CustomTextView
+                        android:id="@+id/customTextViewNoSubscriptionLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="No plan subscribed, please select one from below."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/_8sdp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

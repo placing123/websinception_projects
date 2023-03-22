@@ -1,0 +1,137 @@
+<div class="modal-body">
+	<div class="form-area">
+		<form id="add_form" name="add_form" autocomplete="off">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="filter-col" for="OfferType">Offer Type</label>
+						<select id="OfferType" name="OfferType" ng-model="OfferType" class="form-control chosen-select"
+							ng-change="getSelectedOfferType(OfferType)">
+							<option value="">Please Select</option>
+							<option value="Offer-1">Offer-1</option>
+							<option value="Offer-2">Offer-2</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="filter-col" for="OfferName">Offer Name</label>
+						<input name="OfferName" type="text" class="form-control" value="" maxlength="40">
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="filter-col" for="OfferName">Offer Percent</label>
+						<input name="OfferPercent" type="number" class="form-control" value="" min="0" max="100">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="filter-col" for="MatchGUID">Select Match</label>
+						<select name="MatchGUID" class="form-control chosen-select" ng-model="MatchGUID"
+							ng-change="getContests(MatchGUID, OfferType)">
+							<option value="">Please Select</option>
+							<option ng-repeat="match in data.matchesList" value="{{match.MatchGUID}}">
+								{{match.TeamNameLocal}} ({{match.TeamNameShortLocal}}) Vs {{match.TeamNameVisitor}} ({{match.TeamNameShortVisitor}}) ON {{match.MatchStartDateTime}}
+							</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="filter-col">Select Contests</label>
+						<select class="form-control chosen-select" name="ContestGUID[]" multiple="">
+							<option value="">Select Contests</option>
+							<option ng-repeat="contest in data.contestsList" ng-if="contest.EntryFee > 0" value="{{contest.ContestGUID}}">{{contest.ContestName}} ( Fee : ₹ {{contest.EntryFee}} | Type : {{contest.EntryType}} | Size : {{contest.ContestSize}} )</option>
+						</select>
+						<small>Select this option to select contest according to selected match.</small>
+					</div>
+				</div>
+			</div>
+			<div class="row" >
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="filter-col" for="NoOfTeams">No. of Team</label>
+						<input name="NoOfTeams" type="number" class="form-control" min="0">
+					</div>
+				</div>
+				<div class="col-md-6" ng-if="OfferType==='Offer-1'">
+					<div class="form-group">
+						<label class="filter-col" for="OfferDateTime">Select Date</label>
+						<input name="OfferDateTime" type="text" id="OfferDateTime" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="control-label"> <strong> Select Users </strong></label>
+						<div class="col-md-12 d-flex">
+							<div class="col-md-4">
+								<input name="UserSelectionType" ng-model="Switch" ng-click="SwitchCheck('AllUsers')"
+									type="radio" class="Type" value="AllUsers"> All Users
+							</div>
+							<div class="col-md-4">
+								<input name="UserSelectionType" ng-model="Switch"
+									ng-click="SwitchCheck('SelectedUsers')" type="radio" class="Type"
+									value="SelectedUsers"> Selected Users
+							</div>
+							<div class="col-md-4">
+								<input name="UserSelectionType" ng-model="Switch" ng-click="SwitchCheck('RandomUsers')"
+									type="radio" class="Type" value="RandomUsers"> Random Users
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" ng-if="Switch == 'SelectedUsers'">
+				<!-- <div class="col-md-12 text-primary">Filter By</div>
+				<hr>
+				<div class="col-md-4 pr-0">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="Keyword" name="Keyword"
+							placeholder="Search Name,Email,Phone">
+					</div>
+				</div>
+				<div class="col-md-1">
+					<div class="form-group">
+						<a ng-click="getALLUsers(Keyword)" class="btn btn-default btn-secondary btn-sm"><img
+								src="asset/img/search.svg"></a>
+					</div>
+				</div> -->
+				<div class="col-md-8">
+					<div class="form-group">
+						<small>Select single or multiple users to continue</small>
+						<small class="float-right">Records Available ({{data.totalUsers?data.totalUsers:0}})</small>
+						<select class="form-control chosen-select" name="UserGUID[]" multiple="">
+							<option value="">Select User</option>
+							<option ng-repeat="User in data.allUsersList" ng-if="User.Email || User.PhoneNumber"
+								value="{{User.UserGUID}}">{{(User.Email) ? User.Email : User.PhoneNumber}}
+								({{User.FullName}})</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row" ng-if="Switch === 'RandomUsers'">
+				<div class="col-md-8">
+					<div class="form-group">
+						<input name="NoOfRandomUsers" type="number" class="form-control" min="0">
+					</div>
+				</div>
+			</div>
+			<!-- hidden parameters -->
+			<!-- <input type="hidden" class="MediaGUIDs" id="MediaGUIDs" name="MediaGUIDs" value=""> for banner -->
+			<!-- hidden parameters /-->
+		</form>
+
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<button type="submit" class="btn btn-success btn-sm" ng-disabled="addDataLoading" ng-click="addData()">Save</button>
+</div>

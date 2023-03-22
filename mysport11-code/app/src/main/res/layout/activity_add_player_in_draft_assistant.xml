@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/auction_bg" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".UI.auction.addPlayerInAssitant.AddPlayerInAssistantActivity">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="@dimen/margin_5"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/ctv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_toRightOf="@+id/iv_close"
+                    android:singleLine="true"
+                    android:text="SELECT Player"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:textAllCaps="true"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/ic_back" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <include layout="@layout/auction_series_info" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:background="@drawable/bg_auction_trans"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginRight="32dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/ctv_player_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="-/100\nPLAYERS"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/secondary_txt_size"
+                    app:textfont="Lato-Bold.ttf" />
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/ctv_credit_left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="-/100 crs\nROUNDS LEFT"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/secondary_txt_size"
+                    app:textfont="Lato-Bold.ttf" />
+
+            </LinearLayout>
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="@dimen/dimen_5dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/ll_wk"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/WK"
+                        style="@style/rippleStyleTransparent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="WK"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        app:rd_enable="false"
+                        app:textfont="Lato-Bold.ttf" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal">
+
+                        <com.mw.fantasy.customView.CustomImageView
+                            android:id="@+id/civ_wk"
+                            android:layout_width="50dp"
+                            android:layout_height="54dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/circle_white_border_light"
+                            android:visibility="gone"
+                            app:actualImageScaleType="fitCenter"
+                            app:fadeDuration="500"
+                            app:failureImage="@drawable/ic_wk"
+                            app:placeholderImage="@drawable/ic_wk"
+                            app:roundAsCircle="true" />
+
+                        <ImageView
+                            android:id="@+id/ic_wk"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="@dimen/margin_5"
+                            android:background="@drawable/circle_player_role_on"
+                            android:padding="@dimen/margin_5"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/ic_wk_auc" />
+
+                        <com.mw.fantasy.customView.CustomTextView
+                            android:id="@+id/ctv_wk"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/circle_gray_bg_white"
+                            android:gravity="center"
+                            android:text="0"
+
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_small_11sp"
+                            app:srcCompat="@drawable/ic_camera"
+                            app:textfont="Lato-Bold.ttf" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_bat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/BAT"
+                        style="@style/rippleStyleTransparent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="BAT"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        app:rd_enable="false"
+                        app:textfont="Lato-Bold.ttf" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal">
+
+                        <com.mw.fantasy.customView.CustomImageView
+                            android:id="@+id/civ_bat"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/circle_white_border_light"
+                            android:padding="2dp"
+                            android:visibility="gone"
+                            app:actualImageScaleType="fitCenter"
+                            app:fadeDuration="500"
+                            app:failureImage="@drawable/ic_bat"
+                            app:placeholderImage="@drawable/ic_bat"
+                            app:roundAsCircle="true" />
+
+                        <ImageView
+                            android:id="@+id/ic_bat"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="@dimen/margin_5"
+                            android:background="@drawable/circle_player_role_on"
+                            android:padding="@dimen/margin_5"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/ic_bat_auction" />
+
+
+                        <com.mw.fantasy.customView.CustomTextView
+                            android:id="@+id/ctv_bat"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/circle_gray_bg_white"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_small_11sp"
+                            app:srcCompat="@drawable/ic_camera"
+                            app:textfont="Lato-Bold.ttf" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/ll_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/AR"
+                        style="@style/rippleStyleTransparent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="AR"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        app:rd_enable="false"
+                        app:textfont="Lato-Bold.ttf" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal">
+
+                        <com.mw.fantasy.customView.CustomImageView
+                            android:id="@+id/civ_ar"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/circle_white_border_light"
+                            android:padding="2dp"
+                            android:visibility="gone"
+                            app:actualImageScaleType="fitCenter"
+                            app:fadeDuration="500"
+                            app:failureImage="@drawable/ic_allrounder"
+                            app:placeholderImage="@drawable/ic_allrounder"
+                            app:roundAsCircle="true" />
+
+                        <ImageView
+                            android:id="@+id/ic_allrounder"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="@dimen/margin_5"
+                            android:background="@drawable/circle_player_role_on"
+                            android:padding="@dimen/margin_5"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/ic_ar_auction" />
+
+                        <com.mw.fantasy.customView.CustomTextView
+                            android:id="@+id/ctv_ar"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/circle_gray_bg_white"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_small_11sp"
+                            app:srcCompat="@drawable/ic_camera"
+                            app:textfont="Lato-Bold.ttf" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_bowl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.mw.fantasy.customView.CustomTextView
+                        android:id="@+id/BOWL"
+                        style="@style/rippleStyleTransparent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="BOWL"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        app:rd_enable="false"
+                        app:textfont="Lato-Bold.ttf" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal">
+
+                        <com.mw.fantasy.customView.CustomImageView
+                            android:id="@+id/civ_bowl"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/circle_white_border_light"
+                            android:padding="2dp"
+                            android:visibility="gone"
+                            app:actualImageScaleType="fitCenter"
+                            app:fadeDuration="500"
+                            app:failureImage="@drawable/ic_bowl"
+                            app:placeholderImage="@drawable/ic_bowl"
+                            app:roundAsCircle="true" />
+
+                        <ImageView
+                            android:id="@+id/ic_bowl"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="@dimen/margin_5"
+                            android:background="@drawable/circle_player_role_on"
+                            android:padding="@dimen/margin_5"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/ic_bowl_auc" />
+
+                        <com.mw.fantasy.customView.CustomTextView
+                            android:id="@+id/ctv_bowl"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/circle_gray_bg_white"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_small_11sp"
+                            app:srcCompat="@drawable/ic_camera"
+                            app:textfont="Lato-Bold.ttf" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            android:background="@color/black"
+            android:orientation="horizontal">
+
+            <com.mw.fantasy.customView.CustomEditText
+                android:id="@+id/cet_search_player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:background="@drawable/border_yellow_bg"
+                android:hint="Search Players"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/secondary_txt_size"
+                app:textfont="Lato-Bold.ttf" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_5dp"
+                android:weightSum="3">
+
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:layout_marginRight="@dimen/dimen_5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Role"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primary_txt_size"
+                    app:textfont="normal" />
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:layout_marginRight="@dimen/dimen_5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Team"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primary_txt_size"
+                    app:textfont="normal" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_5dp"
+                android:weightSum="4">
+
+
+                <com.mw.fantasy.customView.CustomSpinner
+                    android:id="@+id/cs_role"
+                    style="@style/auctionSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:layout_marginRight="@dimen/dimen_5dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/yellow_bottom_line"
+                    app:rd_style="@style/Material.Drawable.Ripple.Wave" />
+
+
+                <com.mw.fantasy.customView.CustomSpinner
+                    android:id="@+id/cs_team"
+                    style="@style/auctionSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:layout_marginRight="@dimen/dimen_5dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/yellow_bottom_line"
+                    app:rd_style="@style/Material.Drawable.Ripple.Wave" />
+
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/ctv_btn_clear"
+                    style="@style/default_ripple"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:layout_marginRight="@dimen/dimen_5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/auction_btn_hold"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="CLEAR ALL"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/secondary_txt_size"
+                    app:textfont="normal" />
+
+            </LinearLayout>
+
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/dimen_10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:textfont="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            android:background="@drawable/bg_auction_trans"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_10dp"
+            android:weightSum="100">
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="55"
+                android:paddingLeft="60dp"
+                android:text="Player Info"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_title_bar_txt_size"
+                app:textfont="Lato-Bold.ttf" />
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:text="Preference"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_title_bar_txt_size"
+                app:textfont="Lato-Bold.ttf" />
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="15"
+                android:gravity="center"
+                android:text="Status"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ag_title_bar_txt_size"
+                app:textfont="Lato-Bold.ttf" />
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_player"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <RelativeLayout
+            android:background="@color/black"
+            android:id="@+id/rl_bottom_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:id="@+id/ctv_btn_submit_players"
+                style="@style/default_ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="Submit SQUAD"
+                android:textColor="@color/black"
+                app:textAllCaps="true"
+
+
+
+                android:background="@drawable/bg_auc_btn"
+                app:textfont="@string/auc_btn_font"
+                android:textSize="@dimen/auc_btn_txt_size"
+                android:padding="@dimen/auc_btn_padding"
+
+
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

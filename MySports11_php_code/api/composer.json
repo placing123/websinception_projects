@@ -1,0 +1,9 @@
+{
+    "require": {
+        "aws/aws-sdk-php": "^3.133",
+        "paytm/paytm-pg": "^0.0.5",
+        "mpdf/mpdf": "^8.0",
+        "ext-gd": "*",
+        "mongodb/mongodb": "^1.7"
+    }
+}

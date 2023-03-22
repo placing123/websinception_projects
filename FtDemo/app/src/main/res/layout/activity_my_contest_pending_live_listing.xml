@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/auction_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ctv_best_team_root"
+        android:orientation="vertical"
+        tools:context=".UI.matchContest.MatchContestActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:gravity="center"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="?android:attr/actionBarSize"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:padding="18dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_back" />
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/back"
+                    android:layout_toRightOf="@+id/back"
+                    android:gravity="center"
+                    android:text="@string/contests"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_regular"
+                    app:textAllCaps="true"
+                    app:textfont="@string/MONTSERRAT_BOLD" />
+
+                <LinearLayout
+                    android:id="@+id/linout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/wallet"
+                        android:layout_width="@dimen/dimen_40dp"
+                        android:layout_height="@dimen/dimen_40dp"
+
+                        android:padding="@dimen/dimen_10dp"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_wallet_auction" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <!-- <fantasylls11.customView.StepperView
+             android:id="@+id/stepper"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>-->
+
+        <include layout="@layout/auction_series_info" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_auction_type_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:id="@+id/ctv_contest_pending"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/contest_type_btn_left_active"
+                android:gravity="center"
+                android:padding="@dimen/dimen_5dp"
+                android:text="Pending"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                app:textfont="Lato-Black.ttf" />
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:id="@+id/ctv_contest_live"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/contest_type_btn_inactive"
+                android:gravity="center"
+                android:padding="@dimen/dimen_5dp"
+                android:text="Live"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                app:textfont="Lato-Black.ttf" />
+
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:id="@+id/ctv_contest_completed"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/contest_type_btn_right_inactive"
+                android:gravity="center"
+                android:padding="@dimen/dimen_5dp"
+                android:text="Completed"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                app:textfont="Lato-Black.ttf" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_error_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_error_not_found"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="@null"
+                android:tint="@color/white"
+                android:visibility="visible"
+                app:srcCompat="@drawable/not_found_img" />
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:id="@+id/ctv_error_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/play_bold"
+                android:gravity="center"
+                android:padding="@dimen/margin_5"
+                android:text="@string/network_error"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/dimen_12sp"
+                app:textAllCaps="true"
+                app:textfont="Lato-Bold.ttf" />
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:id="@+id/tv_tryAgn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_auc_btn"
+                android:gravity="center"
+
+                android:padding="@dimen/auc_btn_padding"
+                android:text="@string/try_again"
+
+
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/auc_btn_txt_size"
+                app:textfont="@string/auc_btn_font" />
+        </LinearLayout>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dimen_8dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_contest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ctv_best_team_root"
+
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_best_team"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            android:background="@drawable/bg_auc_btn"
+            android:gravity="center"
+            android:padding="@dimen/auc_btn_padding"
+            android:text="Best Team"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/auc_btn_txt_size"
+            app:textfont="@string/auc_btn_font" />
+
+    </FrameLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="32dp"
+    android:layout_marginRight="32dp"
+    android:orientation="vertical"
+
+    app:layout_goneMarginRight="@dimen/dimen_16dp">
+
+
+    <com.mw.fantasy.customView.CustomTextView
+        android:id="@+id/ctv_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/dimen_8dp"
+        android:drawableTint="@color/yellow"
+        android:gravity="end"
+        android:text="View 1 more"
+        android:textColor="@color/yellow"
+        app:drawableRightCompat="@drawable/ic_next_white"
+        app:textAllCaps="true"
+        android:textSize="14sp"
+        app:textfont="Lato-Bold.ttf" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_offset_1px"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:layout_marginBottom="@dimen/dimen_12sp"
+        android:background="@color/white" />
+
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dimen_50dp"
+    android:layout_height="@dimen/dimen_50dp"
+    android:layout_marginRight="@dimen/dimen_8dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_data_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <com.mw.fantasy.customView.CustomImageView
+            android:paddingTop="@dimen/dimen_2dp"
+            android:background="@drawable/drafted_player_pic_bg"
+            android:id="@+id/civ_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            app:actualImageScaleType="centerInside"
+            app:failureImage="@drawable/player"
+            app:failureImageScaleType="centerInside"
+            app:image_type="normal"
+            app:placeholderImage="@drawable/player"
+            app:placeholderImageScaleType="centerInside" />
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:text="VIRAT KOHLI"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            app:textfont="Lato-Bold.ttf" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rec_trans_white_bg" />
+
+
+</FrameLayout>

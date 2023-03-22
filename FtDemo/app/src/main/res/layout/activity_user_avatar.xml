@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/joinContestLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:layout_above="@+id/ctv_join_contests"
+
+
+        android:layout_marginBottom="-15dp"
+        android:background="@drawable/border_round_corner"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:visibility="visible">
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/ctv_title"
+            style="@style/rippleStyleTransparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            android:text="@string/chooseAvatar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_extra_large"
+            app:rd_enable="true"
+            app:textfont="bold" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                tools:listitem="@layout/item_favorite_team" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_cross"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/circle_blue"
+        android:padding="8dp"
+        app:srcCompat="@drawable/ic_cross" />
+
+    <com.mw.fantasy.customView.CustomTextView
+        android:id="@+id/ctv_join_contests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_margin="15dp"
+        android:background="@drawable/shedow_yellow_background"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/save"
+        android:textColor="@color/white"
+
+        android:textSize="@dimen/primary_txt_size"
+        app:rd_enable="true"
+        app:textfont="light" />
+
+    <include
+        layout="@layout/loader_layout"
+        android:visibility="gone"></include>
+
+</RelativeLayout>

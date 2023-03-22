@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dimen_60dp"
+    android:id="@+id/ll_root"
+    android:layout_marginRight="@dimen/dimen_5dp"
+    android:layout_height="65dp"
+    android:orientation="vertical">
+
+
+    <com.mw.fantasy.customView.CustomImageView
+        android:id="@+id/civ_pic"
+        app:actualImageScaleType="centerCrop"
+        app:failureImageScaleType="centerCrop"
+        app:placeholderImageScaleType="centerCrop"
+        android:layout_width="@dimen/dimen_60dp"
+        android:layout_height="@dimen/dimen_50dp"
+        app:image_type="normal"
+        app:backgroundImage="@color/white"
+        app:placeholderImage="@drawable/player"
+        app:roundAsCircle="false" />
+
+    <com.mw.fantasy.customView.CustomTextView
+        android:id="@+id/ctv_name"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:maxLines="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="VIRAT KOHLI"
+        android:paddingLeft="@dimen/dimen_2dp"
+        android:paddingRight="@dimen/dimen_2dp"
+        android:background="@color/yellow"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        app:textfont="Lato-Bold.ttf" />
+
+</LinearLayout>

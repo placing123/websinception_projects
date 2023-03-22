@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_error"
+    android:background="@android:color/transparent"
+    android:visibility="visible"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:visibility="visible">
+
+        <ImageView
+            android:tint="@color/black"
+            android:id="@+id/iv_error"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_80dp"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_error" />
+
+        <ImageView
+            android:id="@+id/iv_error_not_found"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:contentDescription="@null"
+            android:tint="@color/black"
+            app:srcCompat="@drawable/ic_error" />
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/tv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/play_bold"
+            android:gravity="center"
+            android:text="@string/app_name"
+            app:textfont="Lato-Bold.ttf"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_small" />
+
+        <com.mw.fantasy.customView.CustomTextView
+            android:id="@+id/tv_tryAgn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/play_bold"
+            android:text="@string/try_again"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+
+
+            android:background="@drawable/bg_auc_btn"
+            app:textfont="@string/auc_btn_font"
+            android:textSize="@dimen/auc_btn_txt_size"
+            android:padding="@dimen/auc_btn_padding"
+
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ProgressBar
+            style="?android:progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/black"
+            android:padding="5dp" />
+    </LinearLayout>
+
+</RelativeLayout>

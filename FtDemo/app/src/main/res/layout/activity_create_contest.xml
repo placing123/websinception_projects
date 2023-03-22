@@ -1,0 +1,414 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_background">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:visibility="gone" />
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="@dimen/_4sdp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/Theme.AppCompat.NoActionBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize">
+
+                <com.mw.fantasy.customView.CustomTextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/menu"
+                    android:layout_toLeftOf="@+id/menu"
+                    android:gravity="center"
+                    android:text="Private Contest"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/toolbar_title_text_size"
+                    android:visibility="visible"
+                    app:textfont="@string/semiBold" />
+
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    app:srcCompat="@drawable/ic_back" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottamRel"
+            android:layout_below="@+id/toolbar">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:scrollbarSize="0dp"
+                android:scrollbarThumbVertical="@android:color/transparent"
+                android:scrollbars="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.CardView
+
+                        android:id="@+id/cardView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        app:contentPadding="@dimen/dimen_10dp"
+                        app:layout_constraintBottom_toTopOf="@+id/card_invite"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card_invite">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:orientation="vertical">
+
+                            <com.mw.fantasy.customView.CustomInputEditText
+                                android:id="@+id/edt_league_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginTop="@dimen/margin_20"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:background="#ededef"
+                                android:backgroundTint="#ededef"
+                                android:hint="@string/league_name"
+                                android:imeActionLabel="Next"
+                                android:imeOptions="actionNext"
+                                android:inputType="textPersonName"
+                                android:paddingLeft="@dimen/dimen_10dp"
+                                android:paddingTop="@dimen/dimen_10dp"
+                                android:paddingRight="@dimen/dimen_10dp"
+                                android:paddingBottom="@dimen/margin_5"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/warm_grey"
+                                android:textSize="@dimen/edt_txt_size_normal"
+                                app:et_labelTextColor="@color/warm_grey"
+                                app:hintfont="@string/semiBold"
+                                app:textfont="@string/semiBold" />
+
+                            <com.mw.fantasy.customView.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginTop="@dimen/dimen_2dp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="@string/give_your_league_a_cool_name"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                app:textfont="@string/REGULAR" />
+
+
+                            <com.mw.fantasy.customView.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="Contest Is Paid?"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_12ssp"
+                                app:textfont="@string/REGULAR" />
+
+                            <RadioGroup
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginTop="@dimen/dimen_2dp">
+
+                                <com.mw.fantasy.customView.CustomRadioButton
+                                    android:id="@+id/crb_paid"
+                                    android:checked="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Paid" />
+
+                                <com.mw.fantasy.customView.CustomRadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Free" />
+
+                            </RadioGroup>
+
+                            <com.mw.fantasy.customView.CustomInputEditText
+                                android:id="@+id/edt_total_winnings_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginTop="@dimen/dimen_15dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:background="#ededef"
+                                android:backgroundTint="#ededef"
+                                android:hint="@string/total_winnings_amount"
+                                android:imeActionLabel="Next"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="5"
+                                android:paddingLeft="@dimen/dimen_10dp"
+                                android:paddingTop="@dimen/dimen_10dp"
+                                android:paddingRight="@dimen/dimen_10dp"
+
+                                android:paddingBottom="@dimen/margin_5"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/warm_grey"
+                                android:textSize="@dimen/edt_txt_size_normal"
+                                app:et_labelTextColor="@color/warm_grey"
+                                app:hintfont="@string/semiBold"
+                                app:textfont="@string/semiBold" />
+
+                            <com.mw.fantasy.customView.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginTop="@dimen/dimen_2dp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="@string/Max_1000_dfs"
+                                android:textColor="@color/secondary_txt_color"
+                                android:textSize="10sp"
+                                android:visibility="gone"
+                                app:textfont="@string/REGULAR" />
+
+
+                            <com.mw.fantasy.customView.CustomInputEditText
+                                android:id="@+id/edt_contest_size"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginTop="@dimen/dimen_15dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:background="#ededef"
+                                android:backgroundTint="#ededef"
+                                android:hint="@string/contest_size"
+                                android:imeActionLabel="Next"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:paddingLeft="@dimen/dimen_10dp"
+                                android:paddingTop="@dimen/dimen_10dp"
+                                android:paddingRight="@dimen/dimen_10dp"
+                                android:paddingBottom="@dimen/margin_5"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/warm_grey"
+                                android:textSize="@dimen/edt_txt_size_normal"
+                                app:et_labelTextColor="@color/warm_grey"
+                                app:hintfont="@string/semiBold"
+                                app:textfont="@string/semiBold" />
+
+                            <com.mw.fantasy.customView.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginTop="@dimen/dimen_2dp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="@string/min_two_max_handrad"
+                                android:textColor="@color/secondary_txt_color"
+                                android:textSize="10sp"
+                                app:textfont="@string/REGULAR" />
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <com.mw.fantasy.customView.CustomTextView
+                                        style="@style/rippleStyleTransparent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="@dimen/dimen_10dp"
+                                        android:gravity="center"
+                                        android:text="@string/all_friends_to_join_multiple_teams"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/dimen_12sp"
+                                        app:rd_enable="false"
+                                        app:textfont="@string/REGULAR" />
+
+                                    <com.rey.material.widget.Switch
+                                        android:id="@+id/switchCompatOpenForAllFriends"
+                                        style="@style/Material.Widget.Switch"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginRight="@dimen/dimen_10dp"
+                                        app:sw_thumbColor="@color/color_thumb_dark"
+                                        app:sw_trackColor="@color/color_thumb_light" />
+                                </RelativeLayout>
+                            </FrameLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_invite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_10dp">
+
+                            <com.mw.fantasy.customView.CustomTextView
+                                android:id="@+id/ctv_entry"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/entry_fee_per_team"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_small"
+                                app:textAllCaps="true"
+                                app:textfont="@string/semiBold" />
+
+                            <com.mw.fantasy.customView.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:text="@string/entry_fee_message"
+                                android:textColor="@color/warm_grey"
+                                android:textSize="@dimen/dimen_12sp"
+                                app:textfont="light" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_timmer"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.mw.fantasy.customView.CustomTextView
+                            android:id="@+id/teamsVS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_5"
+                            android:paddingLeft="@dimen/margin_5"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_12sp"
+                            app:textfont="@string/REGULAR" />
+
+                        <com.mw.fantasy.customView.CustomTextView
+                            android:id="@+id/ctv_timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawablePadding="@dimen/margin_5"
+                            android:paddingRight="@dimen/margin_5"
+                            android:text="22h 11m 12s"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_12sp"
+                            app:drawableLeftCompat="@drawable/ic_time_black"
+                            app:textfont="@string/REGULAR" />
+
+                    </LinearLayout>
+
+
+                </android.support.constraint.ConstraintLayout>
+            </ScrollView>
+
+            <include
+                layout="@layout/loader_layout"
+                android:visibility="gone"></include>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bottamRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.mw.fantasy.customView.CustomTextView
+                android:id="@+id/ctv_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/shedow_yellow_background"
+                android:gravity="center"
+                android:padding="@dimen/dimen_10dp"
+                android:text="@string/create_contest_and_invite_friends"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:rd_enable="true"
+                app:textAllCaps="true"
+                app:textfont="@string/REGULAR" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
